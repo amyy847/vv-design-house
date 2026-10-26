@@ -1,0 +1,19 @@
+node_modules/
+photos-src/
+.DS_Store
+Thumbs.db
+
+# Original deliveries (large PNG/PDF); the site uses the WebP copies in site/assets/img
+/Al Batros Dahabeya/
+/LUMIèRE/
+/Le fayan Suites/
+/Osiria dahbeya/
+/soleil/
+/LUMIèRE-20261025T211409Z-1-001/
+/hacienda/
+/paradise katameya/
+/creek town/
+/fa-ng/
+
+# Vercel project link (created by the Vercel CLI)
+.vercel/

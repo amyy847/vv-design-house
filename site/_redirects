@@ -1,0 +1,2 @@
+# One template for every project: /projects/soleil -> project.html
+/projects/:slug  /project.html  200

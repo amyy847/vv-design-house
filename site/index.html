@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>VV Design House — Vanessa Victor, Architecture &amp; Interiors</title>
+  <meta name="description" content="VV Design House is the architecture and interior design studio of Vanessa Victor, working between Cairo and Mauritius on homes, hotels and luxury Nile cruises.">
+  <meta property="og:title" content="VV Design House — Vanessa Victor">
+  <meta property="og:description" content="Architecture and interiors between Cairo and Mauritius.">
+  <meta property="og:image" content="/assets/img/site/hero.webp">
+  <meta property="og:type" content="website">
+  <meta name="theme-color" content="#f3eee6">
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+
+  <script>
+    // Flags read by CSS before first paint: JS is on, and motion is allowed.
+    document.documentElement.classList.add('js');
+    if (!matchMedia('(prefers-reduced-motion: reduce)').matches) document.documentElement.classList.add('motion');
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400&display=swap">
+  <link rel="preload" as="image" href="/assets/img/site/hero.webp" fetchpriority="high">
+  <link rel="stylesheet" href="/assets/css/base.css">
+  <link rel="stylesheet" href="/assets/css/home.css">
+</head>
+<body class="home">
+  <a class="skip-link label" href="#main">Skip to content</a>
+
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="arrow" viewBox="0 0 14 10"><path d="M0 5h13M9 1l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1"/></symbol>
+  </svg>
+
+  <!-- 1. Intro (only plays once per visit; hidden without JS) -->
+  <div class="intro" aria-hidden="true">
+    <div class="intro__logo"><span class="logo"></span></div>
+  </div>
+
+  <header class="site-header">
+    <a class="site-header__brand" href="/" aria-label="Vanessa Victor design house, home"><span class="logo"></span></a>
+    <nav class="site-nav" aria-label="Main">
+      <a class="link-line" href="/#about">About</a>
+      <a class="link-line" href="/projects">Portfolio</a>
+      <a class="link-line" href="/contact">Contact</a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <!-- 2. Hero -->
+    <section class="hero" data-header="dark">
+      <div class="hero__media">
+        <img src="/assets/img/site/hero.webp" srcset="/assets/img/site/hero-sm.webp 800w, /assets/img/site/hero.webp 2000w" sizes="100vw" width="2000" height="1331" alt="" fetchpriority="high" decoding="async">
+      </div>
+      <h1 class="hero__logo">
+        <span class="visually-hidden">Vanessa Victor — VV Design House</span>
+        <span class="logo" aria-hidden="true"></span>
+      </h1>
+      <div class="hero__foot wrap label">
+        <span>Architecture &amp; Interior Design</span>
+        <span class="hero__place">Cairo — Mauritius</span>
+        <span class="hero__scroll">Scroll <i></i></span>
+      </div>
+    </section>
+
+    <!-- 4. Featured projects -->
+    <section class="featured" id="portfolio" data-header="light" aria-roledescription="carousel" aria-label="Selected projects">
+      <div class="featured__panel">
+        <!-- The frame starts as a smaller window inside the coloured panel and zooms to full screen on scroll. -->
+        <div class="featured__frame">
+          <div class="featured__zoom"></div>
+          <div class="featured__shade"></div>
+        </div>
+        <div class="featured__lead">
+          <div class="featured__nav">
+            <p class="featured__counter label" aria-live="polite">
+              <span class="featured__current">01</span><span class="featured__sep">/</span><span class="featured__total">09</span>
+            </p>
+            <span class="featured__rule"></span>
+            <button class="featured__arrow" type="button" data-dir="-1" aria-label="Previous project"><svg width="14" height="10" style="transform:scaleX(-1)"><use href="#arrow"/></svg></button>
+            <button class="featured__arrow" type="button" data-dir="1" aria-label="Next project"><svg width="14" height="10"><use href="#arrow"/></svg></button>
+          </div>
+          <div class="featured__titles"></div>
+        </div>
+        <div class="featured__details"></div>
+        <div class="featured__buttons">
+          <a class="btn btn--solid featured__view" href="/projects">View project</a>
+          <a class="btn btn--paper" href="/projects">View all projects</a>
+        </div>
+      </div>
+      <noscript><p class="wrap"><a href="/projects">See all projects</a></p></noscript>
+    </section>
+
+    <!-- 5. About -->
+    <section class="about" id="about" data-header="dark">
+      <div class="about__intro wrap">
+        <p class="label">About the studio</p>
+        <h2 class="about__title">Designing between the Nile and the&nbsp;Indian&nbsp;Ocean.</h2>
+      </div>
+
+      <ul class="stats wrap">
+        <li class="stat" data-reveal><span class="stat__num" data-count="2014" data-from="2000">2014</span><span class="label">In practice since</span></li>
+        <li class="stat" data-reveal><span class="stat__num" data-count="9" data-pad="2" data-project-count>09</span><span class="label">Projects</span></li>
+        <li class="stat" data-reveal><span class="stat__num" data-count="2" data-pad="2">02</span><span class="label">Countries: Egypt &amp; Mauritius</span></li>
+        <li class="stat" data-reveal><span class="stat__num" data-count="3" data-pad="2">03</span><span class="label">Homes · Hotels · Nile cruises</span></li>
+      </ul>
+
+      <div class="founder wrap">
+        <figure class="founder__portrait">
+          <img src="/assets/img/site/portrait-sm.webp" srcset="/assets/img/site/portrait-sm.webp 533w, /assets/img/site/portrait.webp 1066w" sizes="(max-width: 860px) 100vw, 30vw" width="1066" height="1600" alt="Portrait of Vanessa Victor" loading="lazy" decoding="async">
+        </figure>
+        <blockquote class="founder__quote">
+          <p>“I design spaces the way we remember them: by their light, their texture and the way they make us&nbsp;feel.”</p>
+          <footer class="label">Vanessa Victor</footer>
+        </blockquote>
+        <aside class="founder__panel" data-reveal>
+          <p class="label">Founder &amp; principal</p>
+          <h3 class="founder__name">Vanessa Victor</h3>
+          <p class="founder__bio">Placeholder bio. Egyptian architect and interior designer. Since 2014 Vanessa has designed private homes, boutique hotels and luxury Nile cruise ships, moving between her studios in Cairo and Mauritius.</p>
+          <dl class="founder__facts">
+            <div><dt class="label">Email</dt><dd><a class="link-line" href="mailto:hello@vvdesignhouse.com">hello@vvdesignhouse.com</a></dd></div>
+            <div><dt class="label">Based in</dt><dd>Cairo, Egypt &amp; Mauritius</dd></div>
+          </dl>
+          <a class="btn btn--on-dark" href="/contact">Get in touch <svg class="btn__arrow"><use href="#arrow"/></svg></a>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <!-- 6. Footer -->
+  <footer class="site-footer" data-header="dark">
+    <div class="footer__cta wrap">
+      <p class="label">Have a space in mind?</p>
+      <h2 class="footer__title">Start with a <em>conversation</em></h2>
+      <a class="btn btn--solid" href="/contact">Get in touch <svg class="btn__arrow"><use href="#arrow"/></svg></a>
+    </div>
+
+    <div class="wrap">
+      <hr class="rule footer__rule">
+      <div class="footer__mid">
+        <nav class="footer__menu" aria-label="Footer">
+          <a class="link-line" href="/">Home</a>
+          <a class="link-line" href="/#about">About</a>
+          <a class="link-line" href="/projects">Portfolio</a>
+          <a class="link-line" href="/contact">Contact</a>
+        </nav>
+        <div class="footer__brand">
+          <span class="logo" role="img" aria-label="Vanessa Victor design house"></span>
+          <small>© <span data-year>2026</span> VV Design House. All rights reserved.</small>
+        </div>
+        <div class="footer__place">
+          <p class="label">Studios</p>
+          <p>Cairo, Egypt<br>Mauritius</p>
+        </div>
+      </div>
+      <div class="footer__bottom label">
+        <a class="link-line" href="mailto:hello@vvdesignhouse.com">hello@vvdesignhouse.com</a>
+        <span><button class="footer__top-btn link-line" type="button" data-back-to-top>Back to top ↑</button></span>
+        <a class="link-line" href="https://www.instagram.com/" target="_blank" rel="noopener">Instagram</a>
+      </div>
+    </div>
+
+    <div class="footer__sketch">
+      <img src="/assets/img/sketch.svg" width="1600" height="300" alt="Ink sketch: Le Morne and a villa in Mauritius, a Nile cruise ship, and a Cairo mosque with the pyramids" loading="lazy" decoding="async">
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.15.0/dist/gsap.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.15.0/dist/ScrollTrigger.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.3.26/dist/lenis.min.js" defer></script>
+  <script type="module" src="/assets/js/home.js"></script>
+</body>
+</html>

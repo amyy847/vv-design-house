@@ -1,0 +1,14 @@
+{
+  "name": "vv-design-house",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "node scripts/serve.mjs",
+    "images": "node scripts/optimize-images.mjs",
+    "images:force": "node scripts/optimize-images.mjs --force",
+    "placeholders": "node scripts/make-placeholders.mjs"
+  },
+  "devDependencies": {
+    "sharp": "0.35.5"
+  }
+}

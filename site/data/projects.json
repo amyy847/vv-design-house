@@ -1,0 +1,1106 @@
+{
+  "projects": [
+    {
+      "slug": "soleil",
+      "title": "Soleil",
+      "category": "Hospitality",
+      "tagline": "Opulent waterside getaway",
+      "year": "",
+      "city": "",
+      "country": "",
+      "area": "",
+      "color": "#d8cfc3",
+      "summary": "A historic river voyage, in rich warm hues and Pharaonic detail.",
+      "brief": "A historic river voyage on the Nile.",
+      "concept": "A blend of luxury and ancient charm, with rich, warm hues reflecting the golden sands and deep blues of the Nile.",
+      "outcome": "",
+      "quote": "The art of creating a deep sense of tranquility.",
+      "spaces": [
+        {
+          "title": "An atmosphere of opulence",
+          "text": "A sanctuary of warmth, with sleek marble surfaces, ambient golden lighting and plush relaxation lounges."
+        },
+        {
+          "title": "Bedrooms",
+          "text": "Designed for relaxation and style, the bedrooms blend modern aesthetics with a cosy, inviting ambiance."
+        },
+        {
+          "title": "Corners of Pharaonic intricacies",
+          "text": ""
+        },
+        {
+          "title": "The dining experience",
+          "text": ""
+        },
+        {
+          "title": "The rooftop",
+          "text": "Innovative design and functional elegance, with open, airy spaces and panoramic views. Teak decking, sleek stainless steel railings and plush seating create a refined yet relaxed atmosphere."
+        },
+        {
+          "title": "Soleil sundeck",
+          "text": "An elegant fusion of modern aesthetics and comfort, with clean lines, luxurious materials and a seamless flow."
+        }
+      ],
+      "images": [
+        {
+          "file": "01",
+          "w": 2000,
+          "h": 1374
+        },
+        {
+          "file": "02",
+          "w": 932,
+          "h": 1296
+        },
+        {
+          "file": "03",
+          "w": 1028,
+          "h": 822
+        },
+        {
+          "file": "04",
+          "w": 1028,
+          "h": 822
+        },
+        {
+          "file": "05",
+          "w": 1244,
+          "h": 800
+        },
+        {
+          "file": "06",
+          "w": 801,
+          "h": 534
+        },
+        {
+          "file": "07",
+          "w": 801,
+          "h": 522
+        },
+        {
+          "file": "08",
+          "w": 2000,
+          "h": 848
+        },
+        {
+          "file": "09",
+          "w": 927,
+          "h": 618
+        },
+        {
+          "file": "10",
+          "w": 927,
+          "h": 618
+        },
+        {
+          "file": "11",
+          "w": 927,
+          "h": 618
+        },
+        {
+          "file": "12",
+          "w": 927,
+          "h": 615
+        },
+        {
+          "file": "13",
+          "w": 1539,
+          "h": 1296
+        },
+        {
+          "file": "14",
+          "w": 1968,
+          "h": 1310
+        },
+        {
+          "file": "15",
+          "w": 1377,
+          "h": 918
+        },
+        {
+          "file": "16",
+          "w": 1377,
+          "h": 918
+        },
+        {
+          "file": "17",
+          "w": 1368,
+          "h": 911
+        },
+        {
+          "file": "18",
+          "w": 627,
+          "h": 627
+        },
+        {
+          "file": "19",
+          "w": 627,
+          "h": 627
+        },
+        {
+          "file": "20",
+          "w": 1278,
+          "h": 851
+        },
+        {
+          "file": "21",
+          "w": 503,
+          "h": 756
+        }
+      ]
+    },
+    {
+      "category": "Residential",
+      "year": "",
+      "city": "",
+      "country": "",
+      "area": "",
+      "brief": "",
+      "concept": "Designed to create a sense of connection: the living area balances lines, soft textures and a complementary material palette.",
+      "outcome": "",
+      "images": [
+        {
+          "file": "01",
+          "w": 2000,
+          "h": 1145
+        },
+        {
+          "file": "02",
+          "w": 2000,
+          "h": 915
+        },
+        {
+          "file": "03",
+          "w": 1408,
+          "h": 1211
+        },
+        {
+          "file": "04",
+          "w": 1112,
+          "h": 1138
+        },
+        {
+          "file": "05",
+          "w": 942,
+          "h": 752
+        },
+        {
+          "file": "06",
+          "w": 947,
+          "h": 752
+        },
+        {
+          "file": "07",
+          "w": 1340,
+          "h": 1222
+        },
+        {
+          "file": "08",
+          "w": 819,
+          "h": 547
+        },
+        {
+          "file": "09",
+          "w": 821,
+          "h": 637
+        },
+        {
+          "file": "10",
+          "w": 814,
+          "h": 767
+        },
+        {
+          "file": "11",
+          "w": 815,
+          "h": 761
+        },
+        {
+          "file": "12",
+          "w": 767,
+          "h": 767
+        },
+        {
+          "file": "13",
+          "w": 1195,
+          "h": 846
+        },
+        {
+          "file": "14",
+          "w": 1112,
+          "h": 612
+        },
+        {
+          "file": "15",
+          "w": 1112,
+          "h": 595
+        },
+        {
+          "file": "16",
+          "w": 644,
+          "h": 737
+        },
+        {
+          "file": "17",
+          "w": 1112,
+          "h": 877
+        },
+        {
+          "file": "18",
+          "w": 1224,
+          "h": 694
+        },
+        {
+          "file": "19",
+          "w": 1225,
+          "h": 583
+        },
+        {
+          "file": "20",
+          "w": 1094,
+          "h": 694
+        },
+        {
+          "file": "21",
+          "w": 1087,
+          "h": 694
+        }
+      ],
+      "slug": "paradise-katameya",
+      "title": "Paradise Katameya",
+      "color": "#cfc9bf",
+      "tagline": "Blending sculptural design with nature",
+      "summary": "A home built around a double-height living space, framed in water and light.",
+      "quote": "Warm timber. Soft stone. Seamless transitions.",
+      "spaces": [
+        {
+          "title": "Double-height living space",
+          "text": ""
+        },
+        {
+          "title": "Spatial continuity",
+          "text": "Designed to create a sense of connection, the living area balances lines, soft textures and a complementary material palette."
+        },
+        {
+          "title": "Defined by lines",
+          "text": ""
+        },
+        {
+          "title": "Framed in water and light",
+          "text": "An escape in every line."
+        }
+      ]
+    },
+    {
+      "slug": "lumiere",
+      "title": "Lumière",
+      "category": "Hospitality",
+      "tagline": "A luxe voyage",
+      "credit": "A project by Kollective Studios",
+      "year": "",
+      "city": "",
+      "country": "",
+      "area": "",
+      "color": "#dcd6cf",
+      "summary": "Luxury and relaxation on the water, in polished wood, velvet and marble.",
+      "brief": "Bringing luxury and relaxation together on the water.",
+      "concept": "Textures and materials chosen for warmth and sophistication: rich, polished wood accents, soft velvet upholstery and marble surfaces with a touch of timeless elegance.",
+      "outcome": "",
+      "spaces": [
+        {
+          "title": "The Lumière Suite",
+          "text": ""
+        },
+        {
+          "title": "Junior suite & cabin",
+          "text": "An exquisite bedroom offering a sanctuary of refined luxury, with a soft, ocean-inspired colour palette and an elegant design."
+        },
+        {
+          "title": "Dine with a view",
+          "text": "A dining area of timeless elegance, where sophisticated design meets effortless comfort. Warm, ambient lighting highlights the rich textures of the custom-crafted furniture and luxurious finishes."
+        },
+        {
+          "title": "The outdoor deck",
+          "text": "An effortless outdoor retreat designed for slow mornings, quiet afternoons and evenings beneath the Nile sky."
+        }
+      ],
+      "images": [
+        {
+          "file": "01",
+          "w": 2000,
+          "h": 1280
+        },
+        {
+          "file": "02",
+          "w": 1663,
+          "h": 1188
+        },
+        {
+          "file": "03",
+          "w": 2000,
+          "h": 1574
+        },
+        {
+          "file": "04",
+          "w": 1331,
+          "h": 2000
+        },
+        {
+          "file": "05",
+          "w": 1063,
+          "h": 1416
+        },
+        {
+          "file": "06",
+          "w": 1507,
+          "h": 2000
+        },
+        {
+          "file": "07",
+          "w": 2000,
+          "h": 1334
+        },
+        {
+          "file": "08",
+          "w": 1250,
+          "h": 1250
+        },
+        {
+          "file": "09",
+          "w": 1649,
+          "h": 1020
+        },
+        {
+          "file": "10",
+          "w": 719,
+          "h": 1020
+        },
+        {
+          "file": "11",
+          "w": 479,
+          "h": 479
+        },
+        {
+          "file": "12",
+          "w": 479,
+          "h": 479
+        },
+        {
+          "file": "13",
+          "w": 479,
+          "h": 479
+        },
+        {
+          "file": "14",
+          "w": 557,
+          "h": 557
+        },
+        {
+          "file": "15",
+          "w": 558,
+          "h": 558
+        },
+        {
+          "file": "16",
+          "w": 558,
+          "h": 558
+        },
+        {
+          "file": "17",
+          "w": 2000,
+          "h": 1330
+        },
+        {
+          "file": "18",
+          "w": 1824,
+          "h": 1605
+        },
+        {
+          "file": "19",
+          "w": 1426,
+          "h": 1604
+        },
+        {
+          "file": "20",
+          "w": 994,
+          "h": 994
+        },
+        {
+          "file": "21",
+          "w": 997,
+          "h": 997
+        },
+        {
+          "file": "22",
+          "w": 2000,
+          "h": 1330
+        },
+        {
+          "file": "23",
+          "w": 1824,
+          "h": 1605
+        },
+        {
+          "file": "24",
+          "w": 1426,
+          "h": 1604
+        }
+      ]
+    },
+    {
+      "category": "Residential",
+      "year": "",
+      "city": "",
+      "country": "",
+      "area": "",
+      "brief": "",
+      "concept": "Oak and soft curves, arched niches and natural textures, filtered light and muted tones, olive stone and warm neutrals.",
+      "outcome": "",
+      "images": [
+        {
+          "file": "01",
+          "w": 2000,
+          "h": 1333
+        },
+        {
+          "file": "02",
+          "w": 2000,
+          "h": 1331
+        },
+        {
+          "file": "03",
+          "w": 2000,
+          "h": 1331
+        },
+        {
+          "file": "04",
+          "w": 1331,
+          "h": 2000
+        },
+        {
+          "file": "05",
+          "w": 1331,
+          "h": 2000
+        },
+        {
+          "file": "06",
+          "w": 1331,
+          "h": 2000
+        },
+        {
+          "file": "07",
+          "w": 1331,
+          "h": 2000
+        },
+        {
+          "file": "08",
+          "w": 1331,
+          "h": 2000
+        },
+        {
+          "file": "09",
+          "w": 1331,
+          "h": 2000
+        },
+        {
+          "file": "10",
+          "w": 1331,
+          "h": 2000
+        },
+        {
+          "file": "11",
+          "w": 1331,
+          "h": 2000
+        },
+        {
+          "file": "12",
+          "w": 2000,
+          "h": 1331
+        },
+        {
+          "file": "13",
+          "w": 1331,
+          "h": 2000
+        },
+        {
+          "file": "14",
+          "w": 1331,
+          "h": 2000
+        },
+        {
+          "file": "15",
+          "w": 1331,
+          "h": 2000
+        },
+        {
+          "file": "16",
+          "w": 2000,
+          "h": 1331
+        },
+        {
+          "file": "17",
+          "w": 1331,
+          "h": 2000
+        },
+        {
+          "file": "18",
+          "w": 1331,
+          "h": 2000
+        },
+        {
+          "file": "19",
+          "w": 1331,
+          "h": 2000
+        },
+        {
+          "file": "20",
+          "w": 1331,
+          "h": 2000
+        },
+        {
+          "file": "21",
+          "w": 2000,
+          "h": 1331
+        },
+        {
+          "file": "22",
+          "w": 2000,
+          "h": 1331
+        },
+        {
+          "file": "23",
+          "w": 2000,
+          "h": 1331
+        },
+        {
+          "file": "24",
+          "w": 1331,
+          "h": 2000
+        },
+        {
+          "file": "25",
+          "w": 2000,
+          "h": 1189
+        },
+        {
+          "file": "26",
+          "w": 1782,
+          "h": 1188
+        },
+        {
+          "file": "27",
+          "w": 1782,
+          "h": 1188
+        },
+        {
+          "file": "28",
+          "w": 1782,
+          "h": 1188
+        }
+      ],
+      "slug": "hacienda-white",
+      "title": "Hacienda White",
+      "color": "#cac0ad",
+      "tagline": "A quiet balance of texture, light and proportion",
+      "summary": "Oak, soft curves and filtered light in muted, warm tones.",
+      "spaces": [
+        {
+          "title": "A bedroom suite with its own vanity",
+          "text": ""
+        },
+        {
+          "title": "Contrasting tiles",
+          "text": ""
+        },
+        {
+          "title": "A softer perspective",
+          "text": "A headboard framed by rich wood panelling and muted sage accents."
+        },
+        {
+          "title": "Designed for shared stays",
+          "text": ""
+        },
+        {
+          "title": "Deep blue tiles",
+          "text": ""
+        },
+        {
+          "title": "An open terrace",
+          "text": "Surrounded by greenery."
+        },
+        {
+          "title": "A shaded pavilion",
+          "text": "Opening onto the garden."
+        }
+      ]
+    },
+    {
+      "slug": "le-fayan-suites",
+      "title": "Le Fayan Suites",
+      "category": "Hospitality",
+      "tagline": "Graceful seaside expedition",
+      "year": "",
+      "city": "",
+      "country": "",
+      "area": "",
+      "color": "#d1b9a6",
+      "summary": "Nature meets sophistication, from the sundeck to the lobby bar.",
+      "brief": "A project that combines nature with sophistication.",
+      "concept": "Warm wood finishes, marble accents, soft lighting and lush greenery come together in calm, refined spaces.",
+      "outcome": "",
+      "spaces": [
+        {
+          "title": "Sundeck",
+          "text": "A fusion of elegance, comfort and serenity, in clean, aesthetic tones that create the perfect retreat."
+        },
+        {
+          "title": "Culinary delights & memorable experiences",
+          "text": "A sophisticated dining setting with refined cuisine and an elegant ambiance."
+        },
+        {
+          "title": "Natural sophistication",
+          "text": "A refined lobby bar where warm wood finishes, marble accents, soft lighting and lush greenery create a calm yet sophisticated social space."
+        }
+      ],
+      "images": [
+        {
+          "file": "01",
+          "w": 2000,
+          "h": 1333
+        },
+        {
+          "file": "02",
+          "w": 635,
+          "h": 847
+        },
+        {
+          "file": "03",
+          "w": 1540,
+          "h": 847
+        },
+        {
+          "file": "04",
+          "w": 896,
+          "h": 882
+        },
+        {
+          "file": "05",
+          "w": 896,
+          "h": 882
+        },
+        {
+          "file": "06",
+          "w": 896,
+          "h": 882
+        },
+        {
+          "file": "07",
+          "w": 1342,
+          "h": 894
+        },
+        {
+          "file": "08",
+          "w": 1342,
+          "h": 894
+        },
+        {
+          "file": "09",
+          "w": 2000,
+          "h": 1333
+        },
+        {
+          "file": "10",
+          "w": 2000,
+          "h": 1333
+        },
+        {
+          "file": "11",
+          "w": 2000,
+          "h": 1321
+        },
+        {
+          "file": "12",
+          "w": 2000,
+          "h": 1333
+        },
+        {
+          "file": "13",
+          "w": 2000,
+          "h": 1333
+        },
+        {
+          "file": "14",
+          "w": 2000,
+          "h": 1333
+        }
+      ]
+    },
+    {
+      "category": "Residential",
+      "year": "",
+      "city": "",
+      "country": "",
+      "area": "",
+      "brief": "",
+      "concept": "Timeless details, modern aesthetic.",
+      "outcome": "",
+      "images": [
+        {
+          "file": "01",
+          "w": 2000,
+          "h": 955
+        },
+        {
+          "file": "02",
+          "w": 1781,
+          "h": 1188
+        },
+        {
+          "file": "03",
+          "w": 1738,
+          "h": 1188
+        },
+        {
+          "file": "04",
+          "w": 1188,
+          "h": 1188
+        },
+        {
+          "file": "05",
+          "w": 1865,
+          "h": 1188
+        },
+        {
+          "file": "06",
+          "w": 1638,
+          "h": 1188
+        },
+        {
+          "file": "07",
+          "w": 925,
+          "h": 1188
+        },
+        {
+          "file": "08",
+          "w": 972,
+          "h": 1145
+        }
+      ],
+      "slug": "creek-town",
+      "title": "Creek Town",
+      "color": "#ddd3c4",
+      "tagline": "Layered with character",
+      "summary": "Timeless details with a modern aesthetic."
+    },
+    {
+      "slug": "al-batros-dahabeya",
+      "title": "Al Batros Dahabeya",
+      "category": "Hospitality",
+      "tagline": "A sanctuary at sea",
+      "year": "",
+      "city": "",
+      "country": "",
+      "area": "",
+      "color": "#d6cbbb",
+      "summary": "A holistic onboard experience of wellbeing, comfort and understated elegance.",
+      "brief": "A holistic onboard experience focused on wellbeing, comfort and understated elegance.",
+      "concept": "A contemporary aesthetic: natural textures, soft fabrics and refined gold accents that create a calm and luxurious space.",
+      "outcome": "",
+      "spaces": [
+        {
+          "title": "Elegant view",
+          "text": "Large panoramic windows fill the rooms with natural light and offer uninterrupted views."
+        },
+        {
+          "title": "Spa & wellness",
+          "text": "Spaces flow seamlessly from tranquil spa areas to elegant lounges. From spa treatments and wellness experiences to peaceful relaxation areas and fitness spaces, every detail offers a journey of comfort, rejuvenation and mindful living."
+        },
+        {
+          "title": "A graceful welcome",
+          "text": "A light-filled reception designed around soft neutrals, natural textures and sculptural details, creating an elegant and inviting arrival."
+        },
+        {
+          "title": "Private retreat",
+          "text": "Thoughtfully designed details extend through the sleeping and bathing spaces, balancing functionality with a warm, refined aesthetic."
+        }
+      ],
+      "images": [
+        {
+          "file": "01",
+          "w": 2000,
+          "h": 1482
+        },
+        {
+          "file": "02",
+          "w": 1925,
+          "h": 1890
+        },
+        {
+          "file": "03",
+          "w": 1086,
+          "h": 726
+        },
+        {
+          "file": "04",
+          "w": 1086,
+          "h": 726
+        },
+        {
+          "file": "05",
+          "w": 1188,
+          "h": 726
+        },
+        {
+          "file": "06",
+          "w": 1033,
+          "h": 520
+        },
+        {
+          "file": "07",
+          "w": 1033,
+          "h": 511
+        },
+        {
+          "file": "08",
+          "w": 698,
+          "h": 467
+        },
+        {
+          "file": "09",
+          "w": 698,
+          "h": 467
+        },
+        {
+          "file": "10",
+          "w": 700,
+          "h": 466
+        },
+        {
+          "file": "11",
+          "w": 698,
+          "h": 465
+        },
+        {
+          "file": "12",
+          "w": 1640,
+          "h": 1311
+        },
+        {
+          "file": "13",
+          "w": 2000,
+          "h": 1125
+        },
+        {
+          "file": "14",
+          "w": 2000,
+          "h": 1125
+        }
+      ]
+    },
+    {
+      "category": "Residential",
+      "year": "",
+      "city": "New Giza",
+      "country": "Egypt",
+      "area": "",
+      "brief": "",
+      "concept": "A layered dialogue of colour, texture and pattern: marble richness, softened by symmetry.",
+      "outcome": "",
+      "images": [
+        {
+          "file": "01",
+          "w": 1188,
+          "h": 1188
+        },
+        {
+          "file": "02",
+          "w": 1188,
+          "h": 1188
+        },
+        {
+          "file": "03",
+          "w": 1188,
+          "h": 1188
+        },
+        {
+          "file": "04",
+          "w": 1188,
+          "h": 1188
+        },
+        {
+          "file": "05",
+          "w": 1188,
+          "h": 1485
+        },
+        {
+          "file": "06",
+          "w": 719,
+          "h": 899
+        },
+        {
+          "file": "07",
+          "w": 1783,
+          "h": 1188
+        },
+        {
+          "file": "08",
+          "w": 1546,
+          "h": 1188
+        },
+        {
+          "file": "09",
+          "w": 964,
+          "h": 1082
+        },
+        {
+          "file": "10",
+          "w": 804,
+          "h": 1076
+        },
+        {
+          "file": "11",
+          "w": 1172,
+          "h": 1188
+        },
+        {
+          "file": "12",
+          "w": 1188,
+          "h": 1188
+        },
+        {
+          "file": "13",
+          "w": 1188,
+          "h": 1188
+        }
+      ],
+      "slug": "fa-ng",
+      "title": "FA•NG",
+      "color": "#cdd0d4",
+      "tagline": "Sun-soaked, relaxed living",
+      "summary": "Marble richness softened by symmetry, in glass, stone and brass.",
+      "quote": "Glass, stone & brass."
+    },
+    {
+      "slug": "osiria-dahbeya",
+      "title": "Osiria Dahbeya",
+      "category": "Hospitality",
+      "tagline": "A cultural experience",
+      "year": "",
+      "city": "",
+      "country": "",
+      "area": "",
+      "color": "#dcd3c6",
+      "summary": "Warm woods, rich textures and sunlit decks framed by the horizon.",
+      "brief": "",
+      "concept": "Refined materials, soft lighting and balanced proportions that evoke warmth, sophistication and effortless hospitality.",
+      "outcome": "",
+      "spaces": [
+        {
+          "title": "Graceful welcome",
+          "text": "An elegantly designed reception that combines refined materials, soft lighting and balanced proportions to evoke warmth, sophistication and effortless hospitality."
+        },
+        {
+          "title": "Elegant greeting",
+          "text": "Warm, woody tones and a comfortable lounge."
+        },
+        {
+          "title": "Royal Exclusive Suite",
+          "text": "Refined luxury with generous proportions, bespoke furnishings and curated details. Bathed in natural sunlight, with warm tones and rich textures that create a serene and elegant atmosphere."
+        },
+        {
+          "title": "Bedrooms",
+          "text": "Crafted with the utmost care for comfort and style, blending contemporary design with a warm and inviting ambiance."
+        },
+        {
+          "title": "Open serenity",
+          "text": "A sunlit sundeck designed for relaxation, offering expansive views and a calm, airy atmosphere."
+        },
+        {
+          "title": "Timeless horizon",
+          "text": "Serene moments framed by the endless horizon, with light textures and curated greenery extending interior living into the open air."
+        }
+      ],
+      "images": [
+        {
+          "file": "01",
+          "w": 2000,
+          "h": 1175
+        },
+        {
+          "file": "02",
+          "w": 2000,
+          "h": 1118
+        },
+        {
+          "file": "03",
+          "w": 1564,
+          "h": 887
+        },
+        {
+          "file": "04",
+          "w": 1372,
+          "h": 1523
+        },
+        {
+          "file": "05",
+          "w": 2000,
+          "h": 1332
+        },
+        {
+          "file": "06",
+          "w": 2000,
+          "h": 1332
+        },
+        {
+          "file": "07",
+          "w": 2000,
+          "h": 1332
+        },
+        {
+          "file": "08",
+          "w": 2000,
+          "h": 1332
+        },
+        {
+          "file": "09",
+          "w": 2000,
+          "h": 1434
+        },
+        {
+          "file": "10",
+          "w": 2000,
+          "h": 1399
+        },
+        {
+          "file": "11",
+          "w": 2000,
+          "h": 1332
+        },
+        {
+          "file": "12",
+          "w": 2000,
+          "h": 1332
+        },
+        {
+          "file": "13",
+          "w": 2000,
+          "h": 1332
+        },
+        {
+          "file": "14",
+          "w": 1512,
+          "h": 1512
+        },
+        {
+          "file": "15",
+          "w": 2000,
+          "h": 1175
+        },
+        {
+          "file": "16",
+          "w": 2000,
+          "h": 867
+        }
+      ]
+    }
+  ]
+}

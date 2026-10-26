@@ -1,0 +1,21 @@
+# No build step: Netlify serves the /site folder as-is.
+# Run `npm run images` locally and commit the generated .webp files.
+[build]
+  publish = "site"
+
+# One template for every project: /projects/zamalek-residence -> project.html
+[[redirects]]
+  from = "/projects/:slug"
+  to = "/project.html"
+  status = 200
+
+[[headers]]
+  for = "/assets/img/*"
+  [headers.values]
+    Cache-Control = "public, max-age=86400"
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
