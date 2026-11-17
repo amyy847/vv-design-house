@@ -195,6 +195,141 @@
 .gitem:hover img, .pnext:hover .pnext__media img { transform: scale(1.03); }
 .gitem button, .pcover button, .pstory__photo button { display: block; width: 100%; height: 100%; cursor: zoom-in; }
 
+/* ---------- Project chapters (layouts that follow the project PDFs) ---------- */
+.chapter { padding-block: clamp(56px, 7vw, 120px); }
+.chapter__photo { margin: 0; overflow: hidden; background: var(--cream-2); }
+.chapter__photo button { display: block; width: 100%; cursor: zoom-in; }
+.chapter__photo img { width: 100%; height: auto; transition: transform 1.2s var(--ease); }
+.chapter__photo:hover img { transform: scale(1.02); }
+.chapter__title { font-size: clamp(32px, 3.2vw, 54px); line-height: 1.05; }
+.chapter__title--center { text-align: center; margin-bottom: clamp(32px, 4vw, 56px); }
+.chapter__text { display: grid; gap: 18px; align-content: start; }
+.chapter__text p { max-width: 38ch; color: var(--ink-2); }
+
+/* Text beside a staggered collage */
+.chapter--collage {
+  display: grid;
+  grid-template-columns: minmax(240px, 1fr) 2.1fr;
+  gap: clamp(32px, 6vw, 110px);
+  align-items: start;
+}
+.chapter--collage .chapter__text { position: sticky; top: calc(var(--header-h) + 32px); padding-top: 8px; }
+.chapter--collage.is-flipped { grid-template-columns: 2.1fr minmax(240px, 1fr); }
+.chapter--collage.is-flipped .chapter__text { order: 2; }
+.collage { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(12px, 1.6vw, 24px); align-items: start; }
+.collage__col { display: grid; gap: clamp(12px, 1.6vw, 24px); }
+.collage__col:nth-child(2) { padding-top: clamp(48px, 9vw, 150px); }
+/* With only two photos, the first is larger and the second drops lower. */
+.collage--2 { grid-template-columns: 1.4fr 1fr; }
+.collage--2 .collage__col:nth-child(2) { padding-top: clamp(80px, 16vw, 260px); }
+.collage--1 { grid-template-columns: minmax(0, 0.62fr); }
+
+/* One large photo with text and smaller photos alongside */
+.chapter--feature {
+  display: grid;
+  grid-template-columns: 1.65fr 1fr;
+  gap: clamp(24px, 4vw, 72px);
+  align-items: start;
+}
+.chapter--feature.is-flipped { grid-template-columns: 1fr 1.65fr; }
+.chapter--feature.is-flipped > .chapter__photo { order: 2; }
+.feature__side { display: grid; gap: clamp(28px, 3vw, 48px); }
+.feature__smalls { display: grid; gap: clamp(12px, 1.6vw, 24px); max-width: 420px; }
+.feature__smalls--0 { display: none; }
+
+.chapter--full .chapter__photo { margin-inline: var(--gutter); }
+
+/* A heading and caption centred over the photos below it */
+.chapter__head { justify-items: center; margin-bottom: clamp(32px, 4vw, 56px); text-align: center; }
+.chapter__head .chapter__text { justify-items: center; }
+.chapter__head .chapter__text p { max-width: 62ch; }
+
+/* Photos side by side at equal height: each takes a share of the width matching its shape */
+.row { display: flex; gap: clamp(12px, 1.6vw, 24px); }
+.row--narrow { max-width: 900px; margin-inline: auto; }
+.row__item { flex: var(--share) 1 0; min-width: 0; }
+
+/* Text beside a grid of evenly cropped photos */
+.chapter--tiles {
+  display: grid;
+  grid-template-columns: 2.1fr minmax(240px, 1fr);
+  gap: clamp(32px, 6vw, 110px);
+  align-items: center;
+}
+.tiles { display: grid; grid-template-columns: repeat(3, 1fr); gap: clamp(8px, 1vw, 16px); }
+.tiles .chapter__photo { aspect-ratio: 3 / 4; }
+.tiles .chapter__photo button { height: 100%; }
+.tiles .chapter__photo img { height: 100%; object-fit: cover; }
+
+.chapter--grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(12px, 1.6vw, 24px);
+  max-width: 1240px;
+  margin-inline: auto;
+}
+
+/* Photo beside a warm panel with a statement */
+.chapter--quote { display: grid; grid-template-columns: 1.4fr 1fr; align-items: stretch; }
+.chapter--quote.is-flipped { grid-template-columns: 1fr 1.4fr; }
+.chapter--quote.is-flipped > .chapter__photo { order: 2; }
+.chapter--quote .chapter__photo img { height: 100%; object-fit: cover; }
+.chapter__quote {
+  margin: 0;
+  display: grid;
+  place-items: center;
+  padding: clamp(32px, 5vw, 80px);
+  background: #c2a487;
+  color: #3b2e22;
+}
+.chapter__quote p { font-family: var(--serif); font-style: italic; font-size: clamp(30px, 3.4vw, 58px); line-height: 1.08; }
+
+/* Dark band */
+.chapter--dark { background: var(--dark); color: var(--on-dark); }
+.dark__inner { display: grid; grid-template-columns: 1fr 1.7fr; gap: clamp(28px, 5vw, 96px); align-items: center; }
+.dark__side { display: grid; gap: clamp(28px, 3vw, 44px); align-content: center; }
+.dark__side .chapter__photo { width: min(220px, 60%); background: #2b2926; }
+.chapter--dark .chapter__text p { color: var(--on-dark-2); }
+
+@media (max-width: 860px) {
+  .chapter--collage, .chapter--collage.is-flipped,
+  .chapter--feature, .chapter--feature.is-flipped,
+  .chapter--quote, .chapter--quote.is-flipped,
+  .chapter--tiles,
+  .dark__inner { grid-template-columns: 1fr; }
+  .row { flex-wrap: wrap; }
+  .row__item { flex: 1 1 calc(50% - 12px); }
+  .row__item .chapter__photo { height: 100%; }
+  .row__item button { height: 100%; }
+  .row__item img { height: 100%; object-fit: cover; }
+  .chapter--collage .chapter__text { position: static; }
+  .chapter--collage.is-flipped .chapter__text,
+  .chapter--feature.is-flipped > .chapter__photo,
+  .chapter--quote.is-flipped > .chapter__photo { order: 0; }
+  .feature__smalls { grid-template-columns: 1fr 1fr; max-width: none; }
+  .chapter--grid { gap: 10px; }
+}
+
+/* ---------- Photos-only layout ("layout": "photos") ---------- */
+/* One seamless wall of photos, edge to edge: no gutters, no empty corners, nothing cropped.
+   project.js packs the photos into rows; each row's height follows from its photos' shapes.
+   The 1px overlaps stop hairline seams from showing between photos at fractional sizes. */
+.essay { padding-bottom: clamp(80px, 10vw, 150px); }
+.essay__row { display: flex; width: 100%; aspect-ratio: var(--sum); overflow: hidden; }
+.essay__row + .essay__row { margin-top: -1px; }
+.essay__photo { flex: var(--a) 1 0; min-width: 0; height: 100%; margin: 0; overflow: hidden; background: var(--cream-2); }
+.essay__photo + .essay__photo { margin-left: -1px; }
+.essay__photo button { display: block; width: 100%; height: 100%; cursor: zoom-in; }
+.essay__photo img { width: 100%; height: 100%; object-fit: cover; transition: transform 1.2s var(--ease); }
+.essay__photo:hover img { transform: scale(1.02); }
+
+/* Gallery: the same packed rows, with space around every photo. A row's height is what its photos
+   need to fill the width left after the gaps (100cqw is the width inside the side margins). */
+.essay--gaps { --gap: clamp(8px, 1.4vw, 22px); container-type: inline-size; display: grid; gap: var(--gap); }
+.essay--gaps .essay__row { aspect-ratio: auto; height: calc((100cqw - (var(--n) - 1) * var(--gap)) / var(--sum)); gap: var(--gap); }
+.essay--gaps .essay__row + .essay__row,
+.essay--gaps .essay__photo + .essay__photo { margin: 0; }
+
 .pnext { position: relative; display: block; height: min(86vh, 58vw); min-height: 420px; overflow: hidden; color: #fff; }
 .pnext__media { position: absolute; inset: 0; }
 .pnext__media img { width: 100%; height: 100%; object-fit: cover; transition: transform 1.2s var(--ease); }
@@ -217,6 +352,82 @@
   .pspaces li { grid-template-columns: 44px 1fr; }
   .pspaces li p { grid-column: 2; }
   .gitem { grid-column: span 12; aspect-ratio: var(--natural); }
+}
+
+/* ---------- Contact ---------- */
+.contact {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: clamp(48px, 8vw, 140px);
+  align-items: start;
+  padding-top: clamp(24px, 3vw, 48px);
+  padding-bottom: clamp(40px, 6vw, 96px);
+}
+.cform { display: grid; gap: clamp(28px, 3vw, 40px); }
+.cform__row { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(20px, 3vw, 40px); }
+.field { display: grid; gap: 10px; min-width: 0; margin: 0; padding: 0; border: 0; }
+.field .label { color: var(--ink-2); }
+.field .label i { font-style: normal; color: var(--ink-3); text-transform: none; letter-spacing: 0.02em; }
+.field input, .field textarea {
+  width: 100%;
+  padding: 6px 0 12px;
+  border: 0;
+  border-bottom: 1px solid var(--line);
+  border-radius: 0;
+  background: transparent;
+  color: var(--ink);
+  font-family: var(--serif);
+  font-size: clamp(22px, 1.8vw, 28px);
+  line-height: 1.3;
+  transition: border-color 0.4s var(--ease);
+}
+.field textarea { resize: vertical; min-height: 140px; }
+.field input::placeholder, .field textarea::placeholder { color: var(--ink-3); opacity: 0.7; }
+.field input:focus, .field textarea:focus { outline: none; border-bottom-color: var(--ink); }
+.field legend { margin-bottom: 14px; padding: 0; }
+
+.chips { display: flex; flex-wrap: wrap; gap: 8px; }
+.chip { position: relative; cursor: pointer; }
+.chip input { position: absolute; opacity: 0; pointer-events: none; }
+.chip span {
+  display: inline-flex;
+  align-items: center;
+  height: 40px;
+  padding: 0 18px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  font-size: 13px;
+  transition: background 0.4s var(--ease), color 0.4s var(--ease), border-color 0.4s var(--ease);
+}
+.chip:hover span { border-color: var(--ink); }
+.chip input:checked + span { background: var(--ink); border-color: var(--ink); color: var(--cream); }
+.chip input:focus-visible + span { outline: 1px solid var(--ink); outline-offset: 3px; }
+
+.cform__foot { display: flex; flex-wrap: wrap; align-items: center; gap: 16px 28px; }
+.cform__note { max-width: 44ch; color: var(--ink-2); font-size: 14px; }
+
+.contact__info {
+  position: sticky;
+  top: calc(var(--header-h) + 24px);
+  display: grid;
+  gap: clamp(28px, 3vw, 40px);
+  padding-left: clamp(0px, 3vw, 48px);
+  border-left: 1px solid var(--line);
+}
+.contact__info .label { margin-bottom: 8px; color: var(--ink-3); }
+.contact__big { font-family: var(--serif); font-size: clamp(24px, 2vw, 32px); line-height: 1.2; overflow-wrap: anywhere; }
+.contact__studios { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+
+/* The contact page has no "Start with a conversation" section above the footer. */
+.site-footer--short { padding-top: 0; }
+.site-footer--short .footer__rule { margin-top: 0; }
+
+@media (max-width: 860px) {
+  .contact { grid-template-columns: 1fr; }
+  .contact__info { position: static; padding-left: 0; border-left: 0; padding-top: 40px; border-top: 1px solid var(--line); }
+}
+@media (max-width: 560px) {
+  .cform__row { grid-template-columns: 1fr; }
 }
 
 /* ---------- Lightbox ---------- */

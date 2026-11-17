@@ -44,108 +44,207 @@
       "images": [
         {
           "file": "01",
-          "w": 2000,
-          "h": 1374
+          "w": 1779,
+          "h": 1184
         },
         {
           "file": "02",
+          "w": 1500,
+          "h": 2000
+        },
+        {
+          "file": "03",
+          "w": 1501,
+          "h": 2000
+        },
+        {
+          "file": "04",
+          "w": 2000,
+          "h": 1331
+        },
+        {
+          "file": "05",
+          "w": 2000,
+          "h": 1333
+        },
+        {
+          "file": "06",
+          "w": 2000,
+          "h": 1334
+        },
+        {
+          "file": "07",
+          "w": 2000,
+          "h": 1333
+        },
+        {
+          "file": "08",
+          "w": 1619,
+          "h": 1079
+        },
+        {
+          "file": "09",
+          "w": 1629,
+          "h": 1086
+        },
+        {
+          "file": "10",
+          "w": 2000,
+          "h": 1332
+        },
+        {
+          "file": "11",
+          "w": 1627,
+          "h": 1085
+        },
+        {
+          "file": "12",
+          "w": 1509,
+          "h": 1006
+        },
+        {
+          "file": "13",
+          "w": 1611,
+          "h": 1074
+        },
+        {
+          "file": "14",
+          "w": 1595,
+          "h": 1064
+        },
+        {
+          "file": "15",
+          "w": 2000,
+          "h": 1333
+        },
+        {
+          "file": "16",
+          "w": 2000,
+          "h": 1334
+        },
+        {
+          "file": "17",
           "w": 932,
           "h": 1296
         },
         {
-          "file": "03",
-          "w": 1028,
-          "h": 822
-        },
-        {
-          "file": "04",
-          "w": 1028,
-          "h": 822
-        },
-        {
-          "file": "05",
-          "w": 1244,
-          "h": 800
-        },
-        {
-          "file": "06",
-          "w": 801,
-          "h": 534
-        },
-        {
-          "file": "07",
-          "w": 801,
-          "h": 522
-        },
-        {
-          "file": "08",
-          "w": 2000,
-          "h": 848
-        },
-        {
-          "file": "09",
-          "w": 927,
-          "h": 618
-        },
-        {
-          "file": "10",
-          "w": 927,
-          "h": 618
-        },
-        {
-          "file": "11",
-          "w": 927,
-          "h": 618
-        },
-        {
-          "file": "12",
-          "w": 927,
-          "h": 615
-        },
-        {
-          "file": "13",
-          "w": 1539,
-          "h": 1296
-        },
-        {
-          "file": "14",
-          "w": 1968,
-          "h": 1310
-        },
-        {
-          "file": "15",
-          "w": 1377,
-          "h": 918
-        },
-        {
-          "file": "16",
-          "w": 1377,
-          "h": 918
-        },
-        {
-          "file": "17",
-          "w": 1368,
-          "h": 911
-        },
-        {
           "file": "18",
-          "w": 627,
-          "h": 627
+          "w": 1771,
+          "h": 1179
         },
         {
           "file": "19",
-          "w": 627,
-          "h": 627
+          "w": 1488,
+          "h": 992
         },
         {
           "file": "20",
-          "w": 1278,
-          "h": 851
+          "w": 1572,
+          "h": 1048
         },
         {
           "file": "21",
-          "w": 503,
-          "h": 756
+          "w": 769,
+          "h": 1156
+        },
+        {
+          "file": "22",
+          "w": 1769,
+          "h": 1177
+        }
+      ],
+      "chapters": [
+        {
+          "layout": "collage",
+          "title": "A historic river voyage",
+          "text": [
+            "A project that exudes a blend of luxury and ancient charm, with rich, warm hues reflecting the golden sands and deep blues of the Nile."
+          ],
+          "images": [
+            "02",
+            "03"
+          ]
+        },
+        {
+          "layout": "feature",
+          "align": "right",
+          "title": "The dining experience",
+          "images": [
+            "04",
+            "05",
+            "06"
+          ]
+        },
+        {
+          "layout": "feature",
+          "title": "The suites",
+          "text": [
+            "Elegantly designed for relaxation and style, each bedroom blends modern aesthetics with a cosy and inviting ambiance."
+          ],
+          "images": [
+            "07",
+            "08",
+            "09"
+          ]
+        },
+        {
+          "layout": "full",
+          "title": "Corners of Pharaonic intricacies",
+          "images": [
+            "10"
+          ]
+        },
+        {
+          "layout": "grid",
+          "images": [
+            "11",
+            "12",
+            "13",
+            "14"
+          ]
+        },
+        {
+          "layout": "quote",
+          "quote": "The art of creating a deep sense of tranquility.",
+          "images": [
+            "15"
+          ]
+        },
+        {
+          "layout": "collage",
+          "align": "right",
+          "title": "An atmosphere of opulence",
+          "text": [
+            "Step into a sanctuary of warmth, adorned with sleek marble surfaces, ambient golden lighting and plush relaxation lounges."
+          ],
+          "images": [
+            "16",
+            "17"
+          ]
+        },
+        {
+          "layout": "collage",
+          "title": "The rooftop",
+          "text": [
+            "A rooftop that defines innovative design and functional elegance, designed to elevate the guest experience, with open, airy spaces and panoramic views.",
+            "High-end materials such as teak wood decking, sleek stainless steel railings and plush seating create a refined yet relaxed atmosphere."
+          ],
+          "images": [
+            "18",
+            "19",
+            "20"
+          ]
+        },
+        {
+          "layout": "dark",
+          "title": "Soleil sundeck",
+          "text": [
+            "An elegant fusion of modern aesthetics and comfort: clean lines, luxurious materials and a seamless flow, creating the perfect retreat."
+          ],
+          "images": [
+            "21",
+            "22"
+          ]
         }
       ]
     },
@@ -162,107 +261,107 @@
         {
           "file": "01",
           "w": 2000,
-          "h": 1145
+          "h": 1517
         },
         {
           "file": "02",
           "w": 2000,
-          "h": 915
+          "h": 1334
         },
         {
           "file": "03",
-          "w": 1408,
-          "h": 1211
+          "w": 1500,
+          "h": 1500
         },
         {
           "file": "04",
-          "w": 1112,
-          "h": 1138
+          "w": 2000,
+          "h": 1333
         },
         {
           "file": "05",
-          "w": 942,
-          "h": 752
+          "w": 1320,
+          "h": 881
         },
         {
           "file": "06",
-          "w": 947,
-          "h": 752
+          "w": 1176,
+          "h": 1154
         },
         {
           "file": "07",
-          "w": 1340,
-          "h": 1222
+          "w": 1485,
+          "h": 1455
         },
         {
           "file": "08",
-          "w": 819,
-          "h": 547
+          "w": 880,
+          "h": 587
         },
         {
           "file": "09",
-          "w": 821,
-          "h": 637
+          "w": 1100,
+          "h": 734
         },
         {
           "file": "10",
-          "w": 814,
-          "h": 767
+          "w": 900,
+          "h": 900
         },
         {
           "file": "11",
-          "w": 815,
-          "h": 761
+          "w": 1200,
+          "h": 1050
         },
         {
           "file": "12",
-          "w": 767,
-          "h": 767
+          "w": 900,
+          "h": 900
         },
         {
           "file": "13",
-          "w": 1195,
-          "h": 846
+          "w": 1500,
+          "h": 834
         },
         {
           "file": "14",
-          "w": 1112,
-          "h": 612
+          "w": 1250,
+          "h": 1250
         },
         {
           "file": "15",
-          "w": 1112,
-          "h": 595
+          "w": 1250,
+          "h": 1250
         },
         {
           "file": "16",
-          "w": 644,
-          "h": 737
+          "w": 1200,
+          "h": 1200
         },
         {
           "file": "17",
-          "w": 1112,
-          "h": 877
+          "w": 800,
+          "h": 800
         },
         {
           "file": "18",
-          "w": 1224,
-          "h": 694
+          "w": 1200,
+          "h": 923
         },
         {
           "file": "19",
-          "w": 1225,
-          "h": 583
+          "w": 1440,
+          "h": 1108
         },
         {
           "file": "20",
-          "w": 1094,
-          "h": 694
+          "w": 1200,
+          "h": 924
         },
         {
           "file": "21",
-          "w": 1087,
-          "h": 694
+          "w": 1200,
+          "h": 923
         }
       ],
       "slug": "paradise-katameya",
@@ -287,6 +386,516 @@
         {
           "title": "Framed in water and light",
           "text": "An escape in every line."
+        }
+      ],
+      "hidden": true,
+      "chapters": [
+        {
+          "layout": "feature",
+          "align": "right",
+          "title": "Blending sculptural design with nature",
+          "images": [
+            "02"
+          ]
+        },
+        {
+          "layout": "quote",
+          "quote": "Double height living space.",
+          "images": [
+            "03"
+          ]
+        },
+        {
+          "layout": "feature",
+          "title": "Spatial continuity",
+          "text": [
+            "Designed to create a sense of connection, the living area balances lines, soft textures and a complementary material palette."
+          ],
+          "images": [
+            "04",
+            "05",
+            "06"
+          ]
+        },
+        {
+          "layout": "feature",
+          "align": "right",
+          "images": [
+            "07",
+            "08",
+            "09"
+          ]
+        },
+        {
+          "layout": "row",
+          "images": [
+            "10",
+            "11",
+            "12"
+          ]
+        },
+        {
+          "layout": "feature",
+          "title": "Warm timber. Soft stone. Seamless transitions.",
+          "images": [
+            "13",
+            "14",
+            "15"
+          ]
+        },
+        {
+          "layout": "row",
+          "title": "Defined by lines",
+          "images": [
+            "16",
+            "17"
+          ]
+        },
+        {
+          "layout": "collage",
+          "align": "right",
+          "title": "Framed in water and light",
+          "text": [
+            "An escape in every line."
+          ],
+          "images": [
+            "18",
+            "19",
+            "20",
+            "21"
+          ]
+        }
+      ]
+    },
+    {
+      "category": "Residential",
+      "year": "",
+      "city": "",
+      "country": "",
+      "area": "",
+      "brief": "",
+      "concept": "Oak and soft curves, arched niches and natural textures, filtered light and muted tones, olive stone and warm neutrals.",
+      "outcome": "",
+      "images": [
+        {
+          "file": "01",
+          "w": 2000,
+          "h": 1331
+        },
+        {
+          "file": "02",
+          "w": 2000,
+          "h": 1331
+        },
+        {
+          "file": "03",
+          "w": 1331,
+          "h": 2000
+        },
+        {
+          "file": "04",
+          "w": 1208,
+          "h": 1815
+        },
+        {
+          "file": "05",
+          "w": 1180,
+          "h": 1773
+        },
+        {
+          "file": "06",
+          "w": 1208,
+          "h": 1815
+        },
+        {
+          "file": "07",
+          "w": 2000,
+          "h": 1333
+        },
+        {
+          "file": "08",
+          "w": 1331,
+          "h": 2000
+        },
+        {
+          "file": "09",
+          "w": 1331,
+          "h": 2000
+        },
+        {
+          "file": "10",
+          "w": 1331,
+          "h": 2000
+        },
+        {
+          "file": "11",
+          "w": 1331,
+          "h": 2000
+        },
+        {
+          "file": "12",
+          "w": 1331,
+          "h": 2000
+        },
+        {
+          "file": "13",
+          "w": 2000,
+          "h": 1331
+        },
+        {
+          "file": "14",
+          "w": 1331,
+          "h": 2000
+        },
+        {
+          "file": "15",
+          "w": 1060,
+          "h": 1593
+        },
+        {
+          "file": "16",
+          "w": 2000,
+          "h": 1331
+        },
+        {
+          "file": "17",
+          "w": 1331,
+          "h": 2000
+        },
+        {
+          "file": "18",
+          "w": 1086,
+          "h": 1587
+        },
+        {
+          "file": "19",
+          "w": 1529,
+          "h": 1210
+        },
+        {
+          "file": "20",
+          "w": 1331,
+          "h": 2000
+        },
+        {
+          "file": "21",
+          "w": 1331,
+          "h": 2000
+        },
+        {
+          "file": "22",
+          "w": 2000,
+          "h": 1333
+        },
+        {
+          "file": "23",
+          "w": 1331,
+          "h": 2000
+        },
+        {
+          "file": "24",
+          "w": 805,
+          "h": 1210
+        },
+        {
+          "file": "25",
+          "w": 1331,
+          "h": 2000
+        },
+        {
+          "file": "26",
+          "w": 1331,
+          "h": 2000
+        },
+        {
+          "file": "27",
+          "w": 1208,
+          "h": 1815
+        },
+        {
+          "file": "28",
+          "w": 1208,
+          "h": 1815
+        },
+        {
+          "file": "29",
+          "w": 1331,
+          "h": 2000
+        },
+        {
+          "file": "30",
+          "w": 2000,
+          "h": 1331
+        },
+        {
+          "file": "31",
+          "w": 1331,
+          "h": 2000
+        },
+        {
+          "file": "32",
+          "w": 1208,
+          "h": 1815
+        },
+        {
+          "file": "33",
+          "w": 1208,
+          "h": 1815
+        },
+        {
+          "file": "34",
+          "w": 2000,
+          "h": 1331
+        },
+        {
+          "file": "35",
+          "w": 1331,
+          "h": 2000
+        },
+        {
+          "file": "36",
+          "w": 2000,
+          "h": 1331
+        },
+        {
+          "file": "37",
+          "w": 1815,
+          "h": 1208
+        },
+        {
+          "file": "38",
+          "w": 779,
+          "h": 1170
+        },
+        {
+          "file": "39",
+          "w": 805,
+          "h": 1210
+        },
+        {
+          "file": "40",
+          "w": 1331,
+          "h": 2000
+        },
+        {
+          "file": "41",
+          "w": 2000,
+          "h": 1334
+        },
+        {
+          "file": "42",
+          "w": 2000,
+          "h": 1334
+        },
+        {
+          "file": "43",
+          "w": 2000,
+          "h": 1334
+        },
+        {
+          "file": "44",
+          "w": 2000,
+          "h": 1334
+        }
+      ],
+      "slug": "hacienda-white",
+      "title": "Hacienda White",
+      "color": "#cac0ad",
+      "tagline": "A quiet balance of texture, light and proportion",
+      "layout": "photos",
+      "cover": "02",
+      "summary": "Oak, soft curves and filtered light in muted, warm tones.",
+      "spaces": [
+        {
+          "title": "A bedroom suite with its own vanity",
+          "text": ""
+        },
+        {
+          "title": "Contrasting tiles",
+          "text": ""
+        },
+        {
+          "title": "A softer perspective",
+          "text": "A headboard framed by rich wood panelling and muted sage accents."
+        },
+        {
+          "title": "Designed for shared stays",
+          "text": ""
+        },
+        {
+          "title": "Deep blue tiles",
+          "text": ""
+        },
+        {
+          "title": "An open terrace",
+          "text": "Surrounded by greenery."
+        },
+        {
+          "title": "A shaded pavilion",
+          "text": "Opening onto the garden."
+        }
+      ],
+      "chapters": [
+        {
+          "layout": "feature",
+          "align": "right",
+          "images": [
+            "02",
+            "03"
+          ]
+        },
+        {
+          "layout": "row",
+          "images": [
+            "04",
+            "05",
+            "06"
+          ]
+        },
+        {
+          "layout": "feature",
+          "title": "Oak and soft curves",
+          "text": [
+            "Arched niches, natural textures."
+          ],
+          "images": [
+            "07",
+            "08"
+          ]
+        },
+        {
+          "layout": "collage",
+          "align": "right",
+          "title": "Filtered light, muted tones",
+          "images": [
+            "09",
+            "10",
+            "11",
+            "12"
+          ]
+        },
+        {
+          "layout": "feature",
+          "title": "Olive stone, warm neutrals",
+          "images": [
+            "13",
+            "14",
+            "15"
+          ]
+        },
+        {
+          "layout": "row",
+          "images": [
+            "16",
+            "17"
+          ]
+        },
+        {
+          "layout": "row",
+          "images": [
+            "18",
+            "19"
+          ]
+        },
+        {
+          "layout": "row",
+          "narrow": true,
+          "images": [
+            "20",
+            "21"
+          ]
+        },
+        {
+          "layout": "feature",
+          "align": "right",
+          "title": "A bedroom suite with its own vanity",
+          "images": [
+            "22",
+            "23",
+            "24"
+          ]
+        },
+        {
+          "layout": "row",
+          "images": [
+            "25",
+            "26",
+            "27",
+            "28"
+          ]
+        },
+        {
+          "layout": "row",
+          "images": [
+            "29",
+            "30"
+          ]
+        },
+        {
+          "layout": "row",
+          "title": "Contrasting tiles",
+          "images": [
+            "31",
+            "32",
+            "33"
+          ]
+        },
+        {
+          "layout": "feature",
+          "title": "A softer perspective",
+          "text": [
+            "A headboard framed by rich wood panelling and muted sage accents."
+          ],
+          "images": [
+            "34",
+            "35"
+          ]
+        },
+        {
+          "layout": "collage",
+          "align": "right",
+          "title": "Designed for shared stays",
+          "images": [
+            "36",
+            "37",
+            "38",
+            "39"
+          ]
+        },
+        {
+          "layout": "collage",
+          "title": "Deep blue tiles",
+          "images": [
+            "40"
+          ]
+        },
+        {
+          "layout": "full",
+          "images": [
+            "41"
+          ]
+        },
+        {
+          "layout": "feature",
+          "align": "right",
+          "title": "An open terrace",
+          "text": [
+            "Surrounded by greenery."
+          ],
+          "images": [
+            "42",
+            "43"
+          ]
+        },
+        {
+          "layout": "feature",
+          "title": "A shaded pavilion",
+          "text": [
+            "Opening onto the garden."
+          ],
+          "images": [
+            "44"
+          ]
         }
       ]
     },
@@ -331,305 +940,212 @@
         },
         {
           "file": "02",
-          "w": 1663,
-          "h": 1188
-        },
-        {
-          "file": "03",
           "w": 2000,
           "h": 1574
         },
         {
+          "file": "03",
+          "w": 1663,
+          "h": 1188
+        },
+        {
           "file": "04",
           "w": 1331,
           "h": 2000
         },
         {
           "file": "05",
-          "w": 1063,
-          "h": 1416
-        },
-        {
-          "file": "06",
-          "w": 1507,
-          "h": 2000
-        },
-        {
-          "file": "07",
-          "w": 2000,
-          "h": 1334
-        },
-        {
-          "file": "08",
           "w": 1250,
           "h": 1250
         },
         {
-          "file": "09",
-          "w": 1649,
-          "h": 1020
+          "file": "06",
+          "w": 1250,
+          "h": 1250
         },
         {
-          "file": "10",
-          "w": 719,
-          "h": 1020
+          "file": "07",
+          "w": 1250,
+          "h": 1250
         },
         {
-          "file": "11",
-          "w": 479,
-          "h": 479
-        },
-        {
-          "file": "12",
-          "w": 479,
-          "h": 479
-        },
-        {
-          "file": "13",
-          "w": 479,
-          "h": 479
-        },
-        {
-          "file": "14",
-          "w": 557,
-          "h": 557
-        },
-        {
-          "file": "15",
-          "w": 558,
-          "h": 558
-        },
-        {
-          "file": "16",
-          "w": 558,
-          "h": 558
-        },
-        {
-          "file": "17",
-          "w": 2000,
-          "h": 1330
-        },
-        {
-          "file": "18",
-          "w": 1824,
-          "h": 1605
-        },
-        {
-          "file": "19",
-          "w": 1426,
-          "h": 1604
-        },
-        {
-          "file": "20",
-          "w": 994,
-          "h": 994
-        },
-        {
-          "file": "21",
+          "file": "08",
           "w": 997,
           "h": 997
         },
         {
+          "file": "09",
+          "w": 997,
+          "h": 997
+        },
+        {
+          "file": "10",
+          "w": 997,
+          "h": 997
+        },
+        {
+          "file": "11",
+          "w": 990,
+          "h": 990
+        },
+        {
+          "file": "12",
+          "w": 540,
+          "h": 720
+        },
+        {
+          "file": "13",
+          "w": 997,
+          "h": 997
+        },
+        {
+          "file": "14",
+          "w": 2000,
+          "h": 1331
+        },
+        {
+          "file": "15",
+          "w": 2000,
+          "h": 1331
+        },
+        {
+          "file": "16",
+          "w": 2000,
+          "h": 1233
+        },
+        {
+          "file": "17",
+          "w": 2000,
+          "h": 1233
+        },
+        {
+          "file": "18",
+          "w": 1405,
+          "h": 2000
+        },
+        {
+          "file": "19",
+          "w": 1507,
+          "h": 2000
+        },
+        {
+          "file": "20",
+          "w": 1059,
+          "h": 1412
+        },
+        {
+          "file": "21",
+          "w": 2000,
+          "h": 1238
+        },
+        {
           "file": "22",
           "w": 2000,
           "h": 1330
         },
         {
           "file": "23",
-          "w": 1824,
-          "h": 1605
+          "w": 2000,
+          "h": 1330
         },
         {
           "file": "24",
-          "w": 1426,
-          "h": 1604
-        }
-      ]
-    },
-    {
-      "category": "Residential",
-      "year": "",
-      "city": "",
-      "country": "",
-      "area": "",
-      "brief": "",
-      "concept": "Oak and soft curves, arched niches and natural textures, filtered light and muted tones, olive stone and warm neutrals.",
-      "outcome": "",
-      "images": [
-        {
-          "file": "01",
-          "w": 2000,
-          "h": 1333
-        },
-        {
-          "file": "02",
-          "w": 2000,
-          "h": 1331
-        },
-        {
-          "file": "03",
-          "w": 2000,
-          "h": 1331
-        },
-        {
-          "file": "04",
-          "w": 1331,
-          "h": 2000
-        },
-        {
-          "file": "05",
-          "w": 1331,
-          "h": 2000
-        },
-        {
-          "file": "06",
-          "w": 1331,
-          "h": 2000
-        },
-        {
-          "file": "07",
-          "w": 1331,
-          "h": 2000
-        },
-        {
-          "file": "08",
-          "w": 1331,
-          "h": 2000
-        },
-        {
-          "file": "09",
-          "w": 1331,
-          "h": 2000
-        },
-        {
-          "file": "10",
-          "w": 1331,
-          "h": 2000
-        },
-        {
-          "file": "11",
-          "w": 1331,
-          "h": 2000
-        },
-        {
-          "file": "12",
-          "w": 2000,
-          "h": 1331
-        },
-        {
-          "file": "13",
-          "w": 1331,
-          "h": 2000
-        },
-        {
-          "file": "14",
-          "w": 1331,
-          "h": 2000
-        },
-        {
-          "file": "15",
-          "w": 1331,
-          "h": 2000
-        },
-        {
-          "file": "16",
-          "w": 2000,
-          "h": 1331
-        },
-        {
-          "file": "17",
-          "w": 1331,
-          "h": 2000
-        },
-        {
-          "file": "18",
-          "w": 1331,
-          "h": 2000
-        },
-        {
-          "file": "19",
-          "w": 1331,
-          "h": 2000
-        },
-        {
-          "file": "20",
-          "w": 1331,
-          "h": 2000
-        },
-        {
-          "file": "21",
-          "w": 2000,
-          "h": 1331
-        },
-        {
-          "file": "22",
-          "w": 2000,
-          "h": 1331
-        },
-        {
-          "file": "23",
-          "w": 2000,
-          "h": 1331
-        },
-        {
-          "file": "24",
-          "w": 1331,
-          "h": 2000
+          "w": 1680,
+          "h": 1120
         },
         {
           "file": "25",
-          "w": 2000,
-          "h": 1189
-        },
-        {
-          "file": "26",
-          "w": 1782,
-          "h": 1188
-        },
-        {
-          "file": "27",
-          "w": 1782,
-          "h": 1188
-        },
-        {
-          "file": "28",
-          "w": 1782,
-          "h": 1188
+          "w": 1920,
+          "h": 1280
         }
       ],
-      "slug": "hacienda-white",
-      "title": "Hacienda White",
-      "color": "#cac0ad",
-      "tagline": "A quiet balance of texture, light and proportion",
-      "summary": "Oak, soft curves and filtered light in muted, warm tones.",
-      "spaces": [
+      "chapters": [
         {
-          "title": "A bedroom suite with its own vanity",
-          "text": ""
+          "layout": "feature",
+          "title": "Bringing luxury and relaxation together on the water",
+          "images": [
+            "02",
+            "03"
+          ]
         },
         {
-          "title": "Contrasting tiles",
-          "text": ""
+          "layout": "collage",
+          "align": "right",
+          "title": "Textures and materials",
+          "text": [
+            "A blend carefully selected to create a sense of warmth and sophistication. Rich, polished wood accents complement soft, luxurious velvet upholstery, while marble surfaces add a touch of timeless elegance."
+          ],
+          "images": [
+            "04",
+            "05",
+            "06",
+            "07"
+          ]
         },
         {
-          "title": "A softer perspective",
-          "text": "A headboard framed by rich wood panelling and muted sage accents."
+          "layout": "tiles",
+          "title": "The dining area",
+          "text": [
+            "Timeless elegance, where sophisticated design meets effortless comfort. Warm, ambient lighting casts a soft glow over the space, highlighting the rich textures of the custom-crafted furniture and luxurious finishes."
+          ],
+          "images": [
+            "08",
+            "09",
+            "10",
+            "11",
+            "12",
+            "13"
+          ]
         },
         {
-          "title": "Designed for shared stays",
-          "text": ""
+          "layout": "collage",
+          "title": "Junior suite & cabin",
+          "text": [
+            "An exquisite bedroom that offers a sanctuary of refined luxury. With its soft, ocean-inspired colour palette and elegant design, the space is an oasis of comfort and sophistication."
+          ],
+          "images": [
+            "14",
+            "15",
+            "16",
+            "17"
+          ]
         },
         {
-          "title": "Deep blue tiles",
-          "text": ""
+          "layout": "collage",
+          "align": "right",
+          "title": "The Lumière Suite",
+          "text": [
+            "Dine with a view."
+          ],
+          "images": [
+            "18",
+            "19",
+            "20"
+          ]
         },
         {
-          "title": "An open terrace",
-          "text": "Surrounded by greenery."
+          "layout": "row",
+          "images": [
+            "21",
+            "22"
+          ]
         },
         {
-          "title": "A shaded pavilion",
-          "text": "Opening onto the garden."
+          "layout": "full",
+          "title": "An effortless outdoor retreat",
+          "text": [
+            "Designed for slow mornings, quiet afternoons and evenings beneath the Nile sky."
+          ],
+          "images": [
+            "23"
+          ]
+        },
+        {
+          "layout": "row",
+          "images": [
+            "24",
+            "25"
+          ]
         }
       ]
     },
@@ -669,58 +1185,58 @@
         },
         {
           "file": "02",
-          "w": 635,
-          "h": 847
+          "w": 1440,
+          "h": 960
         },
         {
           "file": "03",
-          "w": 1540,
-          "h": 847
+          "w": 1440,
+          "h": 960
         },
         {
           "file": "04",
-          "w": 896,
-          "h": 882
+          "w": 1440,
+          "h": 960
         },
         {
           "file": "05",
-          "w": 896,
-          "h": 882
+          "w": 1591,
+          "h": 1061
         },
         {
           "file": "06",
-          "w": 896,
-          "h": 882
+          "w": 1652,
+          "h": 1101
         },
         {
           "file": "07",
-          "w": 1342,
-          "h": 894
+          "w": 2000,
+          "h": 1333
         },
         {
           "file": "08",
-          "w": 1342,
-          "h": 894
+          "w": 2000,
+          "h": 1333
         },
         {
           "file": "09",
           "w": 2000,
-          "h": 1333
+          "h": 1321
         },
         {
           "file": "10",
           "w": 2000,
-          "h": 1333
+          "h": 1334
         },
         {
           "file": "11",
           "w": 2000,
-          "h": 1321
+          "h": 1334
         },
         {
           "file": "12",
           "w": 2000,
-          "h": 1333
+          "h": 1354
         },
         {
           "file": "13",
@@ -729,8 +1245,70 @@
         },
         {
           "file": "14",
-          "w": 2000,
-          "h": 1333
+          "w": 1101,
+          "h": 1468
+        },
+        {
+          "file": "15",
+          "w": 1441,
+          "h": 961
+        }
+      ],
+      "chapters": [
+        {
+          "layout": "collage",
+          "title": "A project that combines nature with sophistication",
+          "images": [
+            "02",
+            "03",
+            "04"
+          ]
+        },
+        {
+          "layout": "feature",
+          "align": "right",
+          "title": "Natural sophistication",
+          "text": [
+            "A refined lobby bar where warm wood finishes, marble accents, soft lighting and lush greenery come together to create a calm yet sophisticated social space."
+          ],
+          "images": [
+            "05",
+            "06"
+          ]
+        },
+        {
+          "layout": "feature",
+          "title": "The suites",
+          "images": [
+            "07",
+            "08",
+            "09"
+          ]
+        },
+        {
+          "layout": "row",
+          "images": [
+            "10",
+            "11"
+          ]
+        },
+        {
+          "layout": "row",
+          "images": [
+            "12",
+            "13"
+          ]
+        },
+        {
+          "layout": "dark",
+          "title": "Sundeck",
+          "text": [
+            "A fusion of elegance, comfort and serenity. This sundeck interior design features clean, aesthetic tones to create the perfect retreat."
+          ],
+          "images": [
+            "14",
+            "15"
+          ]
         }
       ]
     },
@@ -747,49 +1325,79 @@
         {
           "file": "01",
           "w": 2000,
-          "h": 955
+          "h": 1275
         },
         {
           "file": "02",
-          "w": 1781,
-          "h": 1188
+          "w": 1400,
+          "h": 1400
         },
         {
           "file": "03",
-          "w": 1738,
-          "h": 1188
+          "w": 1010,
+          "h": 1342
         },
         {
           "file": "04",
-          "w": 1188,
-          "h": 1188
+          "w": 1109,
+          "h": 1425
         },
         {
           "file": "05",
-          "w": 1865,
-          "h": 1188
+          "w": 2000,
+          "h": 1125
         },
         {
           "file": "06",
-          "w": 1638,
-          "h": 1188
+          "w": 2000,
+          "h": 1335
         },
         {
           "file": "07",
-          "w": 925,
-          "h": 1188
+          "w": 1953,
+          "h": 1335
         },
         {
           "file": "08",
-          "w": 972,
-          "h": 1145
+          "w": 1839,
+          "h": 1335
         }
       ],
       "slug": "creek-town",
       "title": "Creek Town",
       "color": "#ddd3c4",
       "tagline": "Layered with character",
-      "summary": "Timeless details with a modern aesthetic."
+      "layout": "gallery",
+      "summary": "Timeless details with a modern aesthetic.",
+      "chapters": [
+        {
+          "layout": "collage",
+          "title": "Layered with character",
+          "text": [
+            "Timeless details. Modern aesthetic."
+          ],
+          "images": [
+            "02",
+            "03",
+            "04"
+          ]
+        },
+        {
+          "layout": "full",
+          "images": [
+            "05"
+          ]
+        },
+        {
+          "layout": "feature",
+          "align": "right",
+          "images": [
+            "06",
+            "07",
+            "08"
+          ]
+        }
+      ]
     },
     {
       "slug": "al-batros-dahabeya",
@@ -826,73 +1434,134 @@
       "images": [
         {
           "file": "01",
-          "w": 2000,
-          "h": 1482
-        },
-        {
-          "file": "02",
-          "w": 1925,
-          "h": 1890
-        },
-        {
-          "file": "03",
-          "w": 1086,
-          "h": 726
-        },
-        {
-          "file": "04",
-          "w": 1086,
-          "h": 726
-        },
-        {
-          "file": "05",
-          "w": 1188,
-          "h": 726
-        },
-        {
-          "file": "06",
-          "w": 1033,
-          "h": 520
-        },
-        {
-          "file": "07",
-          "w": 1033,
-          "h": 511
-        },
-        {
-          "file": "08",
-          "w": 698,
-          "h": 467
-        },
-        {
-          "file": "09",
-          "w": 698,
-          "h": 467
-        },
-        {
-          "file": "10",
-          "w": 700,
-          "h": 466
-        },
-        {
-          "file": "11",
-          "w": 698,
-          "h": 465
-        },
-        {
-          "file": "12",
           "w": 1640,
           "h": 1311
         },
         {
-          "file": "13",
+          "file": "02",
+          "w": 660,
+          "h": 660
+        },
+        {
+          "file": "03",
+          "w": 660,
+          "h": 660
+        },
+        {
+          "file": "04",
+          "w": 800,
+          "h": 489
+        },
+        {
+          "file": "05",
+          "w": 600,
+          "h": 422
+        },
+        {
+          "file": "06",
+          "w": 1925,
+          "h": 1890
+        },
+        {
+          "file": "07",
+          "w": 1280,
+          "h": 854
+        },
+        {
+          "file": "08",
+          "w": 1000,
+          "h": 563
+        },
+        {
+          "file": "09",
+          "w": 1000,
+          "h": 563
+        },
+        {
+          "file": "10",
           "w": 2000,
           "h": 1125
         },
         {
-          "file": "14",
+          "file": "11",
           "w": 2000,
           "h": 1125
+        },
+        {
+          "file": "12",
+          "w": 990,
+          "h": 668
+        },
+        {
+          "file": "13",
+          "w": 1086,
+          "h": 723
+        },
+        {
+          "file": "14",
+          "w": 1000,
+          "h": 668
+        }
+      ],
+      "chapters": [
+        {
+          "layout": "collage",
+          "title": "A graceful welcome",
+          "text": [
+            "A light-filled reception designed around soft neutrals, natural textures and sculptural details, creating an elegant and inviting arrival."
+          ],
+          "images": [
+            "02",
+            "03",
+            "04",
+            "05"
+          ]
+        },
+        {
+          "layout": "feature",
+          "align": "right",
+          "title": "Elegant view",
+          "text": [
+            "Large panoramic windows fill the rooms with natural light and offer uninterrupted views."
+          ],
+          "images": [
+            "06"
+          ]
+        },
+        {
+          "layout": "feature",
+          "title": "Contemporary aesthetic",
+          "text": [
+            "A blend of natural textures, soft fabrics and refined gold accents that create a calm and luxurious space."
+          ],
+          "images": [
+            "07",
+            "08",
+            "09"
+          ]
+        },
+        {
+          "layout": "row",
+          "title": "Private retreat",
+          "text": [
+            "Thoughtfully designed details extend through the sleeping and bathing spaces, balancing functionality with a warm, refined aesthetic."
+          ],
+          "images": [
+            "10",
+            "11"
+          ]
+        },
+        {
+          "layout": "row",
+          "title": "Spa & wellness",
+          "text": [
+            "Spaces flow seamlessly from tranquil spa areas to elegant lounges, offering guests a journey of comfort, rejuvenation and mindful living. From spa treatments and wellness experiences to peaceful relaxation areas and fitness spaces, every detail is designed to create a holistic onboard experience focused on wellbeing, comfort and understated elegance."
+          ],
+          "images": [
+            "12",
+            "13",
+            "14"
+          ]
         }
       ]
     },
@@ -908,67 +1577,62 @@
       "images": [
         {
           "file": "01",
-          "w": 1188,
-          "h": 1188
+          "w": 2000,
+          "h": 2000
         },
         {
           "file": "02",
-          "w": 1188,
-          "h": 1188
+          "w": 1610,
+          "h": 1610
         },
         {
           "file": "03",
-          "w": 1188,
-          "h": 1188
+          "w": 2000,
+          "h": 2000
         },
         {
           "file": "04",
-          "w": 1188,
-          "h": 1188
+          "w": 2000,
+          "h": 2000
         },
         {
           "file": "05",
+          "w": 1840,
+          "h": 1840
+        },
+        {
+          "file": "06",
+          "w": 1610,
+          "h": 1610
+        },
+        {
+          "file": "07",
+          "w": 800,
+          "h": 1000
+        },
+        {
+          "file": "08",
+          "w": 1610,
+          "h": 1074
+        },
+        {
+          "file": "09",
           "w": 1188,
           "h": 1485
         },
         {
-          "file": "06",
-          "w": 719,
-          "h": 899
-        },
-        {
-          "file": "07",
-          "w": 1783,
-          "h": 1188
-        },
-        {
-          "file": "08",
-          "w": 1546,
-          "h": 1188
-        },
-        {
-          "file": "09",
-          "w": 964,
-          "h": 1082
-        },
-        {
           "file": "10",
-          "w": 804,
-          "h": 1076
+          "w": 2000,
+          "h": 1333
         },
         {
           "file": "11",
-          "w": 1172,
+          "w": 1543,
           "h": 1188
         },
         {
           "file": "12",
-          "w": 1188,
-          "h": 1188
-        },
-        {
-          "file": "13",
-          "w": 1188,
+          "w": 1172,
           "h": 1188
         }
       ],
@@ -977,7 +1641,54 @@
       "color": "#cdd0d4",
       "tagline": "Sun-soaked, relaxed living",
       "summary": "Marble richness softened by symmetry, in glass, stone and brass.",
-      "quote": "Glass, stone & brass."
+      "quote": "Glass, stone & brass.",
+      "chapters": [
+        {
+          "layout": "collage",
+          "title": "Sun-soaked, relaxed living",
+          "images": [
+            "02",
+            "03",
+            "04"
+          ]
+        },
+        {
+          "layout": "feature",
+          "align": "right",
+          "title": "A layered dialogue of colour, texture and pattern",
+          "images": [
+            "05",
+            "06",
+            "07"
+          ]
+        },
+        {
+          "layout": "feature",
+          "images": [
+            "08",
+            "09"
+          ]
+        },
+        {
+          "layout": "feature",
+          "align": "right",
+          "title": "Marble richness",
+          "text": [
+            "Softened by symmetry."
+          ],
+          "images": [
+            "10",
+            "11"
+          ]
+        },
+        {
+          "layout": "quote",
+          "quote": "Glass, stone & brass.",
+          "images": [
+            "12"
+          ]
+        }
+      ]
     },
     {
       "slug": "osiria-dahbeya",
@@ -1023,32 +1734,32 @@
         {
           "file": "01",
           "w": 2000,
-          "h": 1175
+          "h": 1332
         },
         {
           "file": "02",
           "w": 2000,
-          "h": 1118
+          "h": 1332
         },
         {
           "file": "03",
-          "w": 1564,
-          "h": 887
+          "w": 1000,
+          "h": 667
         },
         {
           "file": "04",
-          "w": 1372,
-          "h": 1523
+          "w": 2000,
+          "h": 1334
         },
         {
           "file": "05",
           "w": 2000,
-          "h": 1332
+          "h": 1176
         },
         {
           "file": "06",
-          "w": 2000,
-          "h": 1332
+          "w": 1750,
+          "h": 1167
         },
         {
           "file": "07",
@@ -1058,17 +1769,17 @@
         {
           "file": "08",
           "w": 2000,
-          "h": 1332
+          "h": 1399
         },
         {
           "file": "09",
           "w": 2000,
-          "h": 1434
+          "h": 1332
         },
         {
           "file": "10",
           "w": 2000,
-          "h": 1399
+          "h": 1436
         },
         {
           "file": "11",
@@ -1078,7 +1789,7 @@
         {
           "file": "12",
           "w": 2000,
-          "h": 1332
+          "h": 1330
         },
         {
           "file": "13",
@@ -1098,7 +1809,86 @@
         {
           "file": "16",
           "w": 2000,
-          "h": 867
+          "h": 1175
+        },
+        {
+          "file": "17",
+          "w": 2000,
+          "h": 1176
+        }
+      ],
+      "chapters": [
+        {
+          "layout": "feature",
+          "title": "Elegant greeting",
+          "text": [
+            "Warm, woody tones and a comfortable lounge."
+          ],
+          "images": [
+            "02",
+            "03"
+          ]
+        },
+        {
+          "layout": "feature",
+          "align": "right",
+          "title": "Graceful welcome",
+          "text": [
+            "An elegantly designed reception combines refined materials, soft lighting and balanced proportions to evoke warmth, sophistication and effortless hospitality."
+          ],
+          "images": [
+            "04",
+            "05",
+            "06"
+          ]
+        },
+        {
+          "layout": "collage",
+          "title": "Royal Exclusive Suite",
+          "text": [
+            "Embodying refined luxury with generous proportions, bespoke furnishings and curated details. Bathed in natural sunlight, it features warm tones and rich textures, creating a serene and elegant atmosphere."
+          ],
+          "images": [
+            "07",
+            "08",
+            "09",
+            "10",
+            "11"
+          ]
+        },
+        {
+          "layout": "feature",
+          "align": "right",
+          "title": "Bedrooms",
+          "text": [
+            "Crafted with the utmost care for comfort and style, this bedroom seamlessly blends contemporary design with a warm and inviting ambiance."
+          ],
+          "images": [
+            "12",
+            "13",
+            "14"
+          ]
+        },
+        {
+          "layout": "collage",
+          "title": "Open serenity",
+          "text": [
+            "A sunlit sundeck designed for relaxation, offering expansive views and a calm, airy atmosphere."
+          ],
+          "images": [
+            "15",
+            "16"
+          ]
+        },
+        {
+          "layout": "full",
+          "title": "Timeless horizon",
+          "text": [
+            "A refined interior offering serene moments framed by the endless horizon, designed with light textures and curated greenery to extend the interior living experience into the open air."
+          ],
+          "images": [
+            "17"
+          ]
         }
       ]
     }

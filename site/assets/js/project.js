@@ -1,5 +1,5 @@
 import {
-  gsap, motion, lenis, initSmoothScroll, initPage, loadProjects, projectImg, projectUrl, pad, revealText,
+  gsap, motion, lenis, initSmoothScroll, initPage, loadProjects, projectImg, projectUrl, pad, revealText, revealPage,
 } from './core.js';
 
 const $ = (s, root = document) => root.querySelector(s);
@@ -28,6 +28,8 @@ if (index === -1) {
   setupLightbox(project);
   setupMotion();
 }
+// The page fades in now that its content is on screen (see transition.js).
+revealPage();
 initPage();
 
 /* ---------- Rendering ---------- */
@@ -38,6 +40,8 @@ function render(p, next) {
 
   const details = [['City', p.city], ['Country', p.country], ['Area', p.area], ['Year', p.year], ['Category', p.category]]
     .filter(([, v]) => v);
+  // "photos": a seamless wall. "gallery": the same wall with gaps around every photo. Neither has text.
+  const photosOnly = p.layout === 'photos' || p.layout === 'gallery';
   const blocks = [['Brief', p.brief], ['Concept', p.concept], ['Outcome', p.outcome]].filter(([, t]) => t);
   const storyPhoto = p.images.length > 1 ? 1 : null;
   const galleryFrom = storyPhoto ? 2 : 1;
@@ -45,6 +49,8 @@ function render(p, next) {
 
   const photoButton = (n, sizes, eager = false) =>
     `<button type="button" data-open="${n}" aria-label="Open photo ${n + 1} of ${p.images.length}">${projectImg(p, n, { sizes, eager, alt: n === 0 ? p.title : '' })}</button>`;
+  // Photos are referenced by file name in projects.json ("06"); this finds their position.
+  const at = (file) => Math.max(0, p.images.findIndex((img) => img.file === file));
 
   const galleryItem = (img, k) => {
     let [span, ratio] = SLOTS[k % SLOTS.length];
@@ -61,7 +67,7 @@ function render(p, next) {
       <h1 class="phero__title">${p.title}</h1>
       <div class="phero__row">
         <div>
-          ${p.tagline ? `<p class="phero__tagline">${p.tagline}</p>` : ''}
+          ${p.tagline && !photosOnly ? `<p class="phero__tagline">${p.tagline}</p>` : ''}
           ${p.credit ? `<p class="phero__credit label">${p.credit}</p>` : ''}
         </div>
         <dl class="phero__details">
@@ -72,6 +78,22 @@ function render(p, next) {
 
     ${p.images.length ? `<figure class="pcover" data-header="light">${photoButton(0, '100vw', true)}</figure>` : ''}
 
+    ${photosOnly ? essay(p, photoButton) : p.chapters ? p.chapters.map((c) => chapter(c, p, at, photoButton)).join('') : genericBody()}
+
+    ${next && next !== p ? `
+    <a class="pnext" href="${projectUrl(next)}" data-header="light">
+      <div class="pnext__media">${projectImg(next, 0, { sizes: '100vw' })}</div>
+      <div class="pnext__body wrap">
+        <p class="label">Next project</p>
+        <h2 class="pnext__title">${next.title}</h2>
+      </div>
+    </a>` : ''}
+    <div class="pmore wrap"><a class="btn" href="/projects">More projects ${arrow}</a></div>`;
+  if (photosOnly) watchEssay(p, photoButton);
+
+  // Projects without chapters yet: text blocks, the spaces list and an even gallery of every photo.
+  function genericBody() {
+    return `
     ${blocks.length ? `
     <section class="pstory wrap ${storyPhoto ? '' : 'pstory--solo'}">
       <div class="pstory__blocks">
@@ -99,17 +121,151 @@ function render(p, next) {
       </ol>
     </section>` : ''}
 
-    ${gallery.length ? `<section class="pgallery wrap" aria-label="Gallery">${gallery.map(galleryItem).join('')}</section>` : ''}
+    ${gallery.length ? `<section class="pgallery wrap" aria-label="Gallery">${gallery.map(galleryItem).join('')}</section>` : ''}`;
+  }
+}
 
-    ${next && next !== p ? `
-    <a class="pnext" href="${projectUrl(next)}" data-header="light">
-      <div class="pnext__media">${projectImg(next, 0, { sizes: '100vw' })}</div>
-      <div class="pnext__body wrap">
-        <p class="label">Next project</p>
-        <h2 class="pnext__title">${next.title}</h2>
-      </div>
-    </a>` : ''}
-    <div class="pmore wrap"><a class="btn" href="/projects">More projects ${arrow}</a></div>`;
+/* ---------- Photos only ---------- */
+
+// Every photo after the cover in one seamless wall: no gutters, no empty corners, nothing cropped.
+// Photos are packed into rows that run the full width of the screen. Each row is exactly as tall as
+// its photos need to meet edge to edge, so tall and wide photos can share a row. The rows are packed
+// again when the screen width changes.
+function essayRows(p, width) {
+  const aspect = (n) => p.images[n].w / p.images[n].h;
+  // Aim for rows about a third as tall as they are wide (never under 240px, never over 560px).
+  const limit = width / Math.max(240, Math.min(560, width * 0.36));
+  const rows = [];
+  let row = [];
+  let sum = 0;
+  for (let n = 1; n < p.images.length; n++) {
+    const a = aspect(n);
+    // Close the row first if it is nearer the target without this photo.
+    if (row.length && sum + a > limit && sum + a - limit > limit - sum) { rows.push(row); row = []; sum = 0; }
+    row.push(n);
+    sum += a;
+    if (sum >= limit) { rows.push(row); row = []; sum = 0; }
+  }
+  // A short last row would be stretched far too tall, so it joins the row above.
+  if (row.length) {
+    if (rows.length && sum < limit * 0.75) rows[rows.length - 1].push(...row);
+    else rows.push(row);
+  }
+  return rows;
+}
+
+function essayHtml(p, photoButton, width) {
+  const aspect = (n) => p.images[n].w / p.images[n].h;
+  return essayRows(p, width).map((row) => {
+    const sum = row.reduce((total, n) => total + aspect(n), 0);
+    const photos = row.map((n) =>
+      `<figure class="essay__photo" style="--a:${aspect(n).toFixed(4)}">${photoButton(n, `${Math.round((100 * aspect(n)) / sum)}vw`)}</figure>`);
+    return `<div class="essay__row" style="--sum:${sum.toFixed(4)};--n:${row.length}">${photos.join('')}</div>`;
+  }).join('');
+}
+
+// Width the rows have to fill: the whole screen, or the screen minus its side margins for the gallery.
+function essayWidth(p) {
+  const screen = document.documentElement.clientWidth;
+  return p.layout === 'gallery' ? screen - 2 * Math.min(56, Math.max(16, screen * 0.04)) : screen;
+}
+
+function essay(p, photoButton) {
+  const gaps = p.layout === 'gallery';
+  return `<section class="essay${gaps ? ' essay--gaps wrap' : ''}" aria-label="Photographs">${essayHtml(p, photoButton, essayWidth(p))}</section>`;
+}
+
+function watchEssay(p, photoButton) {
+  const wall = $('.essay');
+  let width = document.documentElement.clientWidth;
+  let timer;
+  addEventListener('resize', () => {
+    clearTimeout(timer);
+    timer = setTimeout(() => {
+      const now = document.documentElement.clientWidth;
+      if (now === width) return; // a phone's address bar changes the height only
+      width = now;
+      wall.innerHTML = essayHtml(p, photoButton, essayWidth(p));
+    }, 150);
+  });
+}
+
+/* ---------- Chapters ---------- */
+
+// One section of a project page, laid out like a page of the project's PDF: a heading and a few
+// lines of text with the photos that belong together. `align: "right"` mirrors the layout.
+function chapter(c, p, at, photoButton) {
+  const flip = c.align === 'right' ? ' is-flipped' : '';
+  const photo = (file, sizes) => `<figure class="chapter__photo" data-reveal>${photoButton(at(file), sizes)}</figure>`;
+  const text = c.title || c.text ? `
+    <div class="chapter__text" data-reveal>
+      ${c.title ? `<h2 class="chapter__title">${c.title}</h2>` : ''}
+      ${(c.text || []).map((t) => `<p>${t}</p>`).join('')}
+    </div>` : '';
+
+  switch (c.layout) {
+    // Text beside a staggered collage of smaller photos, split into two offset columns.
+    case 'collage': {
+      const cols = [c.images.filter((_, i) => i % 2 === 0), c.images.filter((_, i) => i % 2 === 1)];
+      return `<section class="chapter chapter--collage${flip} wrap">
+        ${text}
+        <div class="collage collage--${c.images.length}">
+          ${cols.map((col) => `<div class="collage__col">${col.map((f) => photo(f, '(min-width: 861px) 30vw, 50vw')).join('')}</div>`).join('')}
+        </div>
+      </section>`;
+    }
+    // One large photo, with the text and two smaller photos alongside.
+    case 'feature':
+      return `<section class="chapter chapter--feature${flip} wrap">
+        ${photo(c.images[0], '(min-width: 861px) 60vw, 100vw')}
+        <div class="feature__side">
+          ${text}
+          <div class="feature__smalls feature__smalls--${c.images.length - 1}">${c.images.slice(1).map((f) => photo(f, '(min-width: 861px) 18vw, 50vw')).join('')}</div>
+        </div>
+      </section>`;
+    // A heading and caption over one photo running the full width of the page.
+    case 'full':
+      return `<section class="chapter chapter--full">
+        ${text ? `<div class="chapter__head wrap">${text}</div>` : ''}
+        ${photo(c.images[0], '100vw')}
+      </section>`;
+    // Photos side by side at the same height, however different their shapes.
+    case 'row':
+      return `<section class="chapter chapter--row wrap">
+        ${text ? `<div class="chapter__head">${text}</div>` : ''}
+        <div class="row${c.narrow ? ' row--narrow' : ''}">
+          ${c.images.map((f) => {
+            const img = p.images[at(f)];
+            return `<div class="row__item" style="--share:${(img.w / img.h).toFixed(3)}">${photo(f, `(min-width: 861px) ${Math.round(100 / c.images.length)}vw, 50vw`)}</div>`;
+          }).join('')}
+        </div>
+      </section>`;
+    // Text beside a neat grid of small, evenly cropped photos.
+    case 'tiles':
+      return `<section class="chapter chapter--tiles wrap">
+        <div class="tiles">${c.images.map((f) => photo(f, '(min-width: 861px) 20vw, 33vw')).join('')}</div>
+        ${text}
+      </section>`;
+    // Four related photos in a quiet two-by-two grid.
+    case 'grid':
+      return `<section class="chapter chapter--grid wrap">${c.images.map((f) => photo(f, '(min-width: 861px) 40vw, 100vw')).join('')}</section>`;
+    // A photo beside a warm panel holding a short statement.
+    case 'quote':
+      return `<section class="chapter chapter--quote${flip} wrap">
+        ${photo(c.images[0], '(min-width: 861px) 58vw, 100vw')}
+        <blockquote class="chapter__quote" data-reveal><p>${c.quote}</p></blockquote>
+      </section>`;
+    // A dark band: a small detail photo and the text, beside one large photo.
+    case 'dark':
+      return `<section class="chapter chapter--dark" data-header="light">
+        <div class="dark__inner wrap">
+          <div class="dark__side">${photo(c.images[0], '(min-width: 861px) 16vw, 40vw')}${text}</div>
+          ${photo(c.images[1], '(min-width: 861px) 58vw, 100vw')}
+        </div>
+      </section>`;
+    default:
+      return '';
+  }
 }
 
 /* ---------- Motion ---------- */

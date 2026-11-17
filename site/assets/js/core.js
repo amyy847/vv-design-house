@@ -37,8 +37,17 @@ let projectsPromise;
 export function loadProjects() {
   projectsPromise ??= fetch('/data/projects.json')
     .then((r) => r.json())
-    .then((d) => d.projects);
+    // Projects marked "hidden": true in projects.json stay in the file but don't appear anywhere.
+    .then((d) => d.projects.filter((p) => !p.hidden).map(withCover));
   return projectsPromise;
+}
+
+// "cover": "02" in projects.json makes that photo lead the project everywhere (home card, project
+// list and project page) without renaming any files. The other photos keep their order.
+function withCover(p) {
+  const i = p.cover ? p.images.findIndex((img) => img.file === p.cover) : -1;
+  if (i < 1) return p;
+  return { ...p, images: [p.images[i], ...p.images.slice(0, i), ...p.images.slice(i + 1)] };
 }
 
 export const pad = (n) => String(n).padStart(2, '0');
@@ -52,6 +61,17 @@ export function projectImg(p, index = 0, { sizes = '100vw', alt = '', eager = fa
   const base = `/assets/img/projects/${p.slug}/${img.file}`;
   return `<img src="${base}-sm.webp" srcset="${base}-sm.webp 800w, ${base}.webp 2000w" sizes="${sizes}"
     width="${img.w}" height="${img.h}" alt="${alt}" ${eager ? '' : 'loading="lazy"'} decoding="async">`;
+}
+
+/* ---------- Page arrival ---------- */
+
+// Pages that build their content with JavaScript fade in (see transition.js) only once it is in place
+// and the photos at the top have loaded, so nothing jumps or pops in while the page is fading.
+export function revealPage() {
+  if (!window.__ptReveal) return;
+  const seen = [...document.querySelectorAll('main img')].filter((img) => img.getBoundingClientRect().top < innerHeight);
+  const ready = Promise.all(seen.map((img) => (img.complete ? 0 : img.decode().catch(() => {}))));
+  Promise.race([ready, new Promise((r) => setTimeout(r, 800))]).then(() => window.__ptReveal?.());
 }
 
 /* ---------- Reveals ---------- */
@@ -78,25 +98,35 @@ function initHeader() {
 
   let lastY = window.scrollY;
   let queued = false;
+  let themeAt = 0;
   const update = () => {
     queued = false;
     const y = window.scrollY;
-    // Light or dark text, depending on the section under the header.
-    let theme = 'dark';
-    for (const el of document.elementsFromPoint(window.innerWidth / 2, header.offsetHeight / 2)) {
-      if (header.contains(el)) continue;
-      const section = el.closest('[data-header]');
-      if (section) { theme = section.dataset.header; break; }
+    // Light or dark text, depending on the section under the header. Looking this up is costly, so it
+    // runs a few times a second while scrolling rather than on every frame.
+    const now = performance.now();
+    if (now - themeAt > 120) {
+      themeAt = now;
+      let theme = 'dark';
+      for (const el of document.elementsFromPoint(window.innerWidth / 2, header.offsetHeight / 2)) {
+        if (header.contains(el)) continue;
+        const section = el.closest('[data-header]');
+        if (section) { theme = section.dataset.header; break; }
+      }
+      header.classList.toggle('is-light', theme === 'light');
     }
-    header.classList.toggle('is-light', theme === 'light');
     header.classList.toggle('is-top', y < window.innerHeight * 0.6);
     // Hide while scrolling down, show again when scrolling up.
     if (y > lastY + 4 && y > window.innerHeight * 0.5) header.classList.add('is-hidden');
     else if (y < lastY - 4 || y < 40) header.classList.remove('is-hidden');
     lastY = y;
   };
+  let settle;
   addEventListener('scroll', () => {
     if (!queued) { queued = true; requestAnimationFrame(update); }
+    // One last look once scrolling pauses, so the header colour is never left a step behind.
+    clearTimeout(settle);
+    settle = setTimeout(() => { themeAt = 0; update(); }, 140);
   }, { passive: true });
   addEventListener('resize', update);
   update();

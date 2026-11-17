@@ -1,5 +1,5 @@
 import {
-  motion, initSmoothScroll, initPage, loadProjects, projectImg, projectUrl, place, pad, revealText,
+  motion, initSmoothScroll, initPage, loadProjects, projectImg, projectUrl, place, pad, revealText, revealPage,
 } from './core.js';
 
 const $ = (s, root = document) => root.querySelector(s);
@@ -15,6 +15,7 @@ $('.plist').innerHTML = projects.map(row).join('');
 document.querySelectorAll('.slider').forEach(initSlider);
 revealText($('.page-title'), { start: 'top 95%' });
 initPage();
+revealPage();
 
 function details(p) {
   return [

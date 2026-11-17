@@ -1,7 +1,7 @@
 import {
   gsap, ScrollTrigger, motion, DESKTOP, lenis,
   initSmoothScroll, initPage, loadProjects, projectImg, projectUrl, place, pad,
-  revealText, scrollToTarget,
+  revealText, scrollToTarget, revealPage,
 } from './core.js';
 
 const $ = (s, root = document) => root.querySelector(s);
@@ -13,6 +13,7 @@ const projects = await loadProjects();
 const featured = projects.slice(0, 3);
 
 renderFeatured();
+preloadFeatured();
 $$('[data-project-count]').forEach((el) => { el.textContent = pad(projects.length); });
 
 const introDone = playIntro();
@@ -20,6 +21,7 @@ setupHero();
 setupFeatured();
 setupAbout();
 initPage();
+revealPage();
 
 if (location.hash) {
   introDone.then(() => {
@@ -42,6 +44,17 @@ function panelColor(p) {
 
 function projectDetails(p) {
   return [['Category', p.category], ['Location', place(p)], ['Area', p.area], ['Year', p.year]].filter(([, v]) => v);
+}
+
+// The three project photos sit stacked in the pinned section. Lazy loading would fetch and decode them
+// right as they fade in, which shows as a stutter. Once the page has loaded, fetch and decode them quietly.
+function preloadFeatured() {
+  const warm = () => $$('.fmedia img').forEach((img) => {
+    img.loading = 'eager';
+    img.decode?.().catch(() => {});
+  });
+  if (document.readyState === 'complete') setTimeout(warm, 300);
+  else addEventListener('load', () => setTimeout(warm, 300), { once: true });
 }
 
 function renderFeatured() {
@@ -155,8 +168,8 @@ function setupFeatured() {
   const current = $('.featured__current', section);
   const view = $('.featured__view', section);
   const total = featured.length;
-  const titleText = titles.map((t) => $('.mask > span', t));
-  const soft = titles.map((t, i) => [$('.ftitle__tag', t), details[i]].filter(Boolean));
+  // A project's title and details fade in and out together.
+  const words = titles.map((t, i) => [t, details[i]]);
   let active = 0;
   let busy = false;
 
@@ -171,11 +184,10 @@ function setupFeatured() {
     if (motion) gsap.fromTo(current, { yPercent: 60 * dir, opacity: 0 }, { yPercent: 0, opacity: 1, duration: 0.5, ease: 'power3.out' });
   };
 
-  // Without pinning (phones, reduced motion), arrows and swipes switch projects with a wipe.
+  // Without pinning (phones, reduced motion), arrows and swipes switch projects with a soft crossfade.
   const show = (target) => {
     const next = (target + total) % total;
     if (busy || next === active) return;
-    const dir = next > active ? 1 : -1;
     const prev = active;
     setActive(next);
     const lists = [media, titles, details];
@@ -186,22 +198,17 @@ function setupFeatured() {
     };
     if (!motion) { finish(); return; }
     busy = true;
-    const inImg = $('img', media[next]);
     gsap.set(media[next], { zIndex: 2 });
     gsap.set(media[prev], { zIndex: 1 });
     gsap.timeline({
       onComplete: () => {
-        gsap.set([media[next], media[prev], inImg, titleText[prev], ...soft[prev]], { clearProps: 'all' });
+        gsap.set([media[next], media[prev], ...words[prev], ...words[next]], { clearProps: 'all' });
         finish();
       },
     })
-      .fromTo(media[next], { clipPath: dir > 0 ? 'inset(0% 0% 0% 100%)' : 'inset(0% 100% 0% 0%)' },
-        { clipPath: 'inset(0% 0% 0% 0%)', duration: 1.1, ease: 'expo.inOut' }, 0)
-      .fromTo(inImg, { scale: 1.12 }, { scale: 1, duration: 1.4, ease: 'expo.out' }, 0.1)
-      .to(titleText[prev], { yPercent: -110, duration: 0.5, ease: 'power2.in' }, 0)
-      .to(soft[prev], { opacity: 0, duration: 0.3 }, 0)
-      .fromTo(titleText[next], { yPercent: 110 }, { yPercent: 0, duration: 0.8, ease: 'power3.out' }, 0.5)
-      .fromTo(soft[next], { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.6, ease: 'power2.out' }, 0.65);
+      .fromTo(media[next], { opacity: 0 }, { opacity: 1, duration: 0.8, ease: 'power1.inOut' }, 0)
+      .to(words[prev], { opacity: 0, duration: 0.3, ease: 'none' }, 0)
+      .fromTo(words[next], { opacity: 0 }, { opacity: 1, duration: 0.5, ease: 'none' }, 0.3);
   };
   let goTo = show;
 
@@ -238,9 +245,7 @@ function setupFeatured() {
 
     // All the projects are stacked and waiting; later ones stay hidden until their turn.
     [media, titles, details].forEach((l) => l.forEach((el) => el.classList.add('is-active')));
-    gsap.set(media.slice(1), { clipPath: 'inset(0% 0% 0% 100%)' });
-    gsap.set(titleText.slice(1), { yPercent: 110 });
-    gsap.set(soft.slice(1).flat(), { opacity: 0 });
+    gsap.set([...media.slice(1), ...words.slice(1).flat()], { opacity: 0 });
 
     gsap.fromTo(panel, { clipPath: 'inset(0% 0.7% 0% 0.7%)' }, {
       clipPath: 'inset(0% 0% 0% 0%)', ease: 'none',
@@ -256,16 +261,12 @@ function setupFeatured() {
       .fromTo(shade, { opacity: 0.3 }, { opacity: 1, ease: 'none' }, 0)
       .fromTo(nav, { opacity: 0 }, { opacity: 1, duration: 0.3, ease: 'none' }, 0.7)
       .addLabel('p0');
+    // Each next project simply fades in over the previous one.
     for (let i = 1; i < total; i++) {
       const at = tl.duration() + HOLD;
-      tl.fromTo(media[i], { clipPath: 'inset(0% 0% 0% 100%)' },
-        { clipPath: 'inset(0% 0% 0% 0%)', ease: 'power2.inOut', immediateRender: false }, at)
-        .fromTo($('img', media[i]), { scale: 1.12 }, { scale: 1, duration: 1.2, ease: 'power2.out', immediateRender: false }, at)
-        .to($('img', media[i - 1]), { xPercent: -8, ease: 'power2.inOut' }, at)
-        .to(titleText[i - 1], { yPercent: -110, duration: 0.4, ease: 'power2.in' }, at)
-        .to(soft[i - 1], { opacity: 0, duration: 0.3, ease: 'none' }, at)
-        .to(titleText[i], { yPercent: 0, duration: 0.6, ease: 'power3.out' }, at + 0.5)
-        .to(soft[i], { opacity: 1, duration: 0.5, ease: 'none' }, at + 0.6)
+      tl.fromTo(media[i], { opacity: 0 }, { opacity: 1, immediateRender: false }, at)
+        .to(words[i - 1], { opacity: 0, duration: 0.4, ease: 'none' }, at)
+        .to(words[i], { opacity: 1, duration: 0.5, ease: 'none' }, at + 0.5)
         .addLabel(`p${i}`, at + 1.1);
     }
     tl.to({}, { duration: HOLD }); // rest on the last project before the page moves on
@@ -276,7 +277,7 @@ function setupFeatured() {
       start: 'top top',
       end: () => `+=${tl.duration() * window.innerHeight * 0.6}`,
       pin: true,
-      scrub: 0.6,
+      scrub: true, // Lenis already smooths the scrolling; extra scrub lag only made it wobble
       animation: tl,
       invalidateOnRefresh: true,
       onUpdate: (self) => {
@@ -302,7 +303,7 @@ function setupFeatured() {
       const target = lenis.direction >= 0 ? (frac > 0.15 ? b : a) : (frac < 0.85 ? a : b);
       if (Math.abs(target - y) > 2) lenis.scrollTo(target, { duration: 0.9 });
     };
-    const onScroll = () => { clearTimeout(timer); timer = setTimeout(snap, 180); };
+    const onScroll = () => { clearTimeout(timer); timer = setTimeout(snap, 260); };
     lenis.on('scroll', onScroll);
 
     return () => {
@@ -326,8 +327,7 @@ function setupFeatured() {
 
 function setupAbout() {
   if (!motion) return;
-  revealText($('.about__title'));
-  revealText($('.founder__quote'), { start: 'top 82%' });
+  revealText($('.about__words'));
   const portrait = $('.founder__portrait');
   gsap.fromTo(portrait, { opacity: 0 }, {
     opacity: 1, duration: 1.6, ease: 'power2.out',

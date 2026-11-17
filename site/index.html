@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-pt-wait>
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -17,10 +17,11 @@
     document.documentElement.classList.add('js');
     if (!matchMedia('(prefers-reduced-motion: reduce)').matches) document.documentElement.classList.add('motion');
   </script>
+  <script src="/assets/js/transition.js"></script>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400&display=swap">
   <link rel="preload" as="image" href="/assets/img/site/hero.webp" fetchpriority="high">
   <link rel="stylesheet" href="/assets/css/base.css">
   <link rel="stylesheet" href="/assets/css/home.css">
@@ -50,7 +51,7 @@
     <!-- 2. Hero -->
     <section class="hero" data-header="dark">
       <div class="hero__media">
-        <img src="/assets/img/site/hero.webp" srcset="/assets/img/site/hero-sm.webp 800w, /assets/img/site/hero.webp 2000w" sizes="100vw" width="2000" height="1331" alt="" fetchpriority="high" decoding="async">
+        <img src="/assets/img/site/hero.webp" srcset="/assets/img/site/hero-sm.webp 800w, /assets/img/site/hero.webp 2000w" sizes="100vw" width="2000" height="1333" alt="" fetchpriority="high" decoding="async">
       </div>
       <h1 class="hero__logo">
         <span class="visually-hidden">Vanessa Victor — VV Design House</span>
@@ -95,7 +96,10 @@
     <section class="about" id="about" data-header="dark">
       <div class="about__intro wrap">
         <p class="label">About the studio</p>
-        <h2 class="about__title">Designing between the Nile and the&nbsp;Indian&nbsp;Ocean.</h2>
+        <div class="about__words">
+          <h2 class="about__title">VV Design House explores the dialogue between timeless and contemporary design, developing unique spaces through concept, sketches, materiality and&nbsp;detail.</h2>
+          <p class="about__lead">VV brings together identity and elegance, creating spaces that feel personal and timeless.</p>
+        </div>
       </div>
 
       <ul class="stats wrap">
@@ -109,14 +113,11 @@
         <figure class="founder__portrait">
           <img src="/assets/img/site/portrait-sm.webp" srcset="/assets/img/site/portrait-sm.webp 533w, /assets/img/site/portrait.webp 1066w" sizes="(max-width: 860px) 100vw, 30vw" width="1066" height="1600" alt="Portrait of Vanessa Victor" loading="lazy" decoding="async">
         </figure>
-        <blockquote class="founder__quote">
-          <p>“I design spaces the way we remember them: by their light, their texture and the way they make us&nbsp;feel.”</p>
-          <footer class="label">Vanessa Victor</footer>
-        </blockquote>
         <aside class="founder__panel" data-reveal>
-          <p class="label">Founder &amp; principal</p>
+          <p class="label">Architect &amp; designer</p>
           <h3 class="founder__name">Vanessa Victor</h3>
-          <p class="founder__bio">Placeholder bio. Egyptian architect and interior designer. Since 2014 Vanessa has designed private homes, boutique hotels and luxury Nile cruise ships, moving between her studios in Cairo and Mauritius.</p>
+          <p class="founder__bio">Vanessa Victor is an Egyptian architect and designer who entered the architecture profession in 2014.</p>
+          <p class="founder__bio">Based between Cairo and Mauritius, her work spans residential, hospitality and luxury Nile cruise design.</p>
           <dl class="founder__facts">
             <div><dt class="label">Email</dt><dd><a class="link-line" href="mailto:hello@vvdesignhouse.com">hello@vvdesignhouse.com</a></dd></div>
             <div><dt class="label">Based in</dt><dd>Cairo, Egypt &amp; Mauritius</dd></div>

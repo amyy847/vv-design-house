@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact — VV Design House</title>
+  <meta name="description" content="Get in touch with Vanessa Victor, VV Design House, about a home, hotel or Nile cruise project in Egypt or Mauritius.">
+  <meta name="theme-color" content="#f3eee6">
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+
+  <script>
+    // Flags read by CSS before first paint: JS is on, and motion is allowed.
+    document.documentElement.classList.add('js');
+    if (!matchMedia('(prefers-reduced-motion: reduce)').matches) document.documentElement.classList.add('motion');
+  </script>
+  <script src="/assets/js/transition.js"></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400&display=swap">
+  <link rel="stylesheet" href="/assets/css/base.css">
+  <link rel="stylesheet" href="/assets/css/pages.css">
+</head>
+<body class="page-contact">
+  <a class="skip-link label" href="#main">Skip to content</a>
+
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="arrow" viewBox="0 0 14 10"><path d="M0 5h13M9 1l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1"/></symbol>
+  </svg>
+
+  <header class="site-header">
+    <a class="site-header__brand" href="/" aria-label="Vanessa Victor design house, home"><span class="logo"></span></a>
+    <nav class="site-nav" aria-label="Main">
+      <a class="link-line" href="/#about">About</a>
+      <a class="link-line" href="/projects">Portfolio</a>
+      <a class="link-line" href="/contact">Contact</a>
+    </nav>
+  </header>
+
+  <main id="main" data-header="dark">
+    <section class="page-head wrap">
+      <p class="label">Contact</p>
+      <h1 class="page-title">Let’s <em>talk</em></h1>
+      <div class="page-head__row">
+        <p class="page-head__intro">Every space has a story. Tell us about yours.</p>
+      </div>
+    </section>
+
+    <section class="contact wrap">
+      <!-- The form opens the visitor's own email app with their message filled in, so it works on any
+           host without a server. To collect messages on Netlify instead, see README.md. -->
+      <form class="cform" data-reveal novalidate>
+        <div class="cform__row">
+          <label class="field">
+            <span class="label">Name</span>
+            <input name="name" type="text" autocomplete="name" required>
+          </label>
+          <label class="field">
+            <span class="label">Email</span>
+            <input name="email" type="email" autocomplete="email" required>
+          </label>
+        </div>
+        <div class="cform__row">
+          <label class="field">
+            <span class="label">Phone <i>(optional)</i></span>
+            <input name="phone" type="tel" autocomplete="tel">
+          </label>
+          <label class="field">
+            <span class="label">Location of the project</span>
+            <input name="location" type="text" placeholder="e.g. New Cairo, Mauritius">
+          </label>
+        </div>
+
+        <fieldset class="field cform__types">
+          <legend class="label">Type of project</legend>
+          <div class="chips">
+            <label class="chip"><input type="radio" name="type" value="Residential"><span>Residential</span></label>
+            <label class="chip"><input type="radio" name="type" value="Hospitality"><span>Hospitality</span></label>
+            <label class="chip"><input type="radio" name="type" value="Nile cruise"><span>Nile cruise</span></label>
+            <label class="chip"><input type="radio" name="type" value="Other"><span>Other</span></label>
+          </div>
+        </fieldset>
+
+        <label class="field">
+          <span class="label">Tell us about your space</span>
+          <textarea name="message" rows="5" required placeholder="Size, timing, the feeling you’re after…"></textarea>
+        </label>
+
+        <div class="cform__foot">
+          <button class="btn btn--solid" type="submit">Send enquiry <svg class="btn__arrow"><use href="#arrow"/></svg></button>
+          <p class="cform__note" aria-live="polite"></p>
+        </div>
+      </form>
+
+      <aside class="contact__info" data-reveal>
+        <div>
+          <p class="label">Email</p>
+          <a class="contact__big link-line" href="mailto:hello@vvdesignhouse.com" data-contact-email>hello@vvdesignhouse.com</a>
+        </div>
+        <div>
+          <p class="label">Instagram</p>
+          <a class="contact__big link-line" href="https://www.instagram.com/" target="_blank" rel="noopener">Follow the studio</a>
+        </div>
+        <div class="contact__studios">
+          <div>
+            <p class="label">Studio</p>
+            <p class="contact__big">Cairo, Egypt</p>
+          </div>
+          <div>
+            <p class="label">Studio</p>
+            <p class="contact__big">Mauritius</p>
+          </div>
+        </div>
+      </aside>
+    </section>
+  </main>
+
+  <!-- 6. Footer (no "Get in touch" call to action: this is that page) -->
+  <footer class="site-footer site-footer--short" data-header="dark">
+    <div class="wrap">
+      <hr class="rule footer__rule">
+      <div class="footer__mid">
+        <nav class="footer__menu" aria-label="Footer">
+          <a class="link-line" href="/">Home</a>
+          <a class="link-line" href="/#about">About</a>
+          <a class="link-line" href="/projects">Portfolio</a>
+          <a class="link-line" href="/contact">Contact</a>
+        </nav>
+        <div class="footer__brand">
+          <span class="logo" role="img" aria-label="Vanessa Victor design house"></span>
+          <small>© <span data-year>2026</span> VV Design House. All rights reserved.</small>
+        </div>
+        <div class="footer__place">
+          <p class="label">Studios</p>
+          <p>Cairo, Egypt<br>Mauritius</p>
+        </div>
+      </div>
+      <div class="footer__bottom label">
+        <a class="link-line" href="mailto:hello@vvdesignhouse.com">hello@vvdesignhouse.com</a>
+        <span><button class="footer__top-btn link-line" type="button" data-back-to-top>Back to top ↑</button></span>
+        <a class="link-line" href="https://www.instagram.com/" target="_blank" rel="noopener">Instagram</a>
+      </div>
+    </div>
+
+    <div class="footer__sketch">
+      <img src="/assets/img/sketch.svg" width="1600" height="300" alt="Ink sketch: Le Morne and a villa in Mauritius, a Nile cruise ship, and a Cairo mosque with the pyramids" loading="lazy" decoding="async">
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.15.0/dist/gsap.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.15.0/dist/ScrollTrigger.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.3.26/dist/lenis.min.js" defer></script>
+  <script type="module" src="/assets/js/contact.js"></script>
+</body>
+</html>
